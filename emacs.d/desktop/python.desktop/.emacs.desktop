@@ -1,0 +1,41 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Apr  9 09:53:44 2014
+;; Desktop file format version 206
+;; Emacs version 24.4.50.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (21317 24312 188746 0) (desktop . "206") "gdr@Devs-MBP.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Monaco-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#f6f3e8") (background-color . "#242424") (line-spacing) (left-fringe . 3) (right-fringe . 4) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#656565") (environment) (frameset--id . "6168-CD16-BA3A-CDDC") (frameset--mini t . t) (height . 50) (width . 204) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 28) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Devs-MBP.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 3) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 70) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 21) (min-pixel-height-safe . 16) (min-pixel-width-safe . 14)) leaf (pixel-width . 1435) (pixel-height . 784) (total-width . 205) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (buffer "views.py" (selected . t) (hscroll . 0) (fringes 3 4 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.ido.last" "~/.emacs.d/lisp/init.el" "~/.emacs.d/lisp/desktop-mode.el" "~/.emacs.d/elpa/archives/melpa/archive-contents" "~/.emacs.d/elpa/archives/gnu/archive-contents" "~/.emacs.d/lisp/global.el" "~/Projects/python_projects/urimgworks/templates/home.djhtml" "~/Projects/python_projects/urimgworks/cms/views.py" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/serverprovision.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/cache/cache.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/client/client.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/http/client.go" "~/.emacs.d/elpa/exec-path-from-shell-readme.txt" "~/.emacs" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/persistence/models.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/util/util.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/neutron/neutron.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/nova/nova.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/cloudio.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/control2.spn.telekom.net.cfg"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/gdr/Projects/python_projects/urimgworks/cms/views.py"
+  "views.py"
+  'python-mode
+  '(linum-mode auto-complete-mode textmate-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/gdr/Projects/python_projects/urimgworks/templates/home.djhtml"
+  "home.djhtml"
+  'web-mode
+  '(linum-mode auto-complete-mode textmate-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+

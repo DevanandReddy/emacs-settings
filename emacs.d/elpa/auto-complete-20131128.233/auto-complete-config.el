@@ -30,7 +30,7 @@
 
 (require 'auto-complete)
 
-
+
 
 ;;;; Additional sources
 
@@ -42,34 +42,34 @@
 
 (defun ac-imenu-candidates ()
   (loop with i = 0
-        with stack = (progn
-                       (unless (local-variable-p 'ac-imenu-index)
-                         (make-local-variable 'ac-imenu-index))
-                       (or ac-imenu-index
-                           (setq ac-imenu-index
-                                 (ignore-errors
-                                   (with-no-warnings
-                                     (imenu--make-index-alist))))))
-        with result
-        while (and stack (or (not (integerp ac-limit))
-                             (< i ac-limit)))
-        for node = (pop stack)
-        if (consp node)
-        do
-        (let ((car (car node))
-              (cdr (cdr node)))
-          (if (consp cdr)
-              (mapc (lambda (child)
-                      (push child stack))
-                    cdr)
-            (when (and (stringp car)
-                       (string-match (concat "^" (regexp-quote ac-prefix)) car))
-              ;; Remove extra characters
-              (if (string-match "^.*\\(()\\|=\\|<>\\)$" car)
-                  (setq car (substring car 0 (match-beginning 1))))
-              (push car result)
-              (incf i))))
-        finally return (nreverse result)))
+	with stack = (progn
+		       (unless (local-variable-p 'ac-imenu-index)
+			 (make-local-variable 'ac-imenu-index))
+		       (or ac-imenu-index
+			   (setq ac-imenu-index
+				 (ignore-errors
+				   (with-no-warnings
+				     (imenu--make-index-alist))))))
+	with result
+	while (and stack (or (not (integerp ac-limit))
+			     (< i ac-limit)))
+	for node = (pop stack)
+	if (consp node)
+	do
+	(let ((car (car node))
+	      (cdr (cdr node)))
+	  (if (consp cdr)
+	      (mapc (lambda (child)
+		      (push child stack))
+		    cdr)
+	    (when (and (stringp car)
+		       (string-match (concat "^" (regexp-quote ac-prefix)) car))
+	      ;; Remove extra characters
+	      (if (string-match "^.*\\(()\\|=\\|<>\\)$" car)
+		  (setq car (substring car 0 (match-beginning 1))))
+	      (push car result)
+	      (incf i))))
+	finally return (nreverse result)))
 
 (ac-define-source imenu
   '((depends imenu)
@@ -103,7 +103,7 @@
 
 (defface ac-yasnippet-candidate-face
   '((t (:inherit ac-candidate-face
-                 :background "sandybrown" :foreground "black")))
+		 :background "sandybrown" :foreground "black")))
   "Face for yasnippet candidate."
   :group 'auto-complete)
 
@@ -129,39 +129,39 @@
 (defun ac-yasnippet-candidate-1 (table)
   (with-no-warnings
     (let ((hashtab (ac-yasnippet-table-hash table))
-          (parent (ac-yasnippet-table-parent table))
-          candidates)
+	  (parent (ac-yasnippet-table-parent table))
+	  candidates)
       (maphash (lambda (key value)
-                 (push key candidates))
-               hashtab)
+		 (push key candidates))
+	       hashtab)
       (setq candidates (all-completions ac-prefix (nreverse candidates)))
       (if parent
-          (setq candidates
-                (append candidates (ac-yasnippet-candidate-1 parent))))
+	  (setq candidates
+		(append candidates (ac-yasnippet-candidate-1 parent))))
       candidates)))
 
 (defun ac-yasnippet-candidates ()
   (with-no-warnings
     (cond (;; 0.8 onwards
-           (fboundp 'yas-active-keys)
-           (all-completions ac-prefix (yas-active-keys)))
-          (;; >0.6.0
-           (fboundp 'yas/get-snippet-tables)
-           (apply 'append (mapcar 'ac-yasnippet-candidate-1
-                                  (condition-case nil
-                                      (yas/get-snippet-tables major-mode)
-                                    (wrong-number-of-arguments
-                                     (yas/get-snippet-tables)))))
-           )
-          (t
-           (let ((table
-                  (if (fboundp 'yas/snippet-table)
-                      ;; <0.6.0
-                      (yas/snippet-table major-mode)
-                    ;; 0.6.0
-                    (yas/current-snippet-table))))
-             (if table
-                 (ac-yasnippet-candidate-1 table)))))))
+	   (fboundp 'yas-active-keys)
+	   (all-completions ac-prefix (yas-active-keys)))
+	  (;; >0.6.0
+	   (fboundp 'yas/get-snippet-tables)
+	   (apply 'append (mapcar 'ac-yasnippet-candidate-1
+				  (condition-case nil
+				      (yas/get-snippet-tables major-mode)
+				    (wrong-number-of-arguments
+				     (yas/get-snippet-tables)))))
+	   )
+	  (t
+	   (let ((table
+		  (if (fboundp 'yas/snippet-table)
+		      ;; <0.6.0
+		      (yas/snippet-table major-mode)
+		    ;; 0.6.0
+		    (yas/current-snippet-table))))
+	     (if table
+		 (ac-yasnippet-candidate-1 table)))))))
 
 (ac-define-source yasnippet
   '((depends yasnippet)
@@ -176,26 +176,26 @@
 (defun ac-semantic-candidates (prefix)
   (with-no-warnings
     (delete ""            ; semantic sometimes returns an empty string
-            (mapcar (lambda (elem)
-                      (cons (semantic-tag-name elem)
-                            (semantic-tag-clone elem)))
-                    (ignore-errors
-                      (or (semantic-analyze-possible-completions
-                           (semantic-analyze-current-context))
-                          (senator-find-tag-for-completion prefix)))))))
+	    (mapcar (lambda (elem)
+		      (cons (semantic-tag-name elem)
+			    (semantic-tag-clone elem)))
+		    (ignore-errors
+		      (or (semantic-analyze-possible-completions
+			   (semantic-analyze-current-context))
+			  (senator-find-tag-for-completion prefix)))))))
 
 (defun ac-semantic-doc (symbol)
   (with-no-warnings
     (let* ((proto (semantic-format-tag-summarize-with-file symbol nil t))
-           (doc (semantic-documentation-for-tag symbol))
-           (res proto))
+	   (doc (semantic-documentation-for-tag symbol))
+	   (res proto))
       (when doc
-        (setq res (concat res "\n\n" doc)))
+	(setq res (concat res "\n\n" doc)))
       res)))
 
 (ac-define-source semantic
   '((available . (or (require 'semantic-ia nil t)
-                     (require 'semantic/ia nil t)))
+		     (require 'semantic/ia nil t)))
     (candidates . (ac-semantic-candidates ac-prefix))
     (document . ac-semantic-doc)
     (prefix . cc-member)
@@ -204,7 +204,7 @@
 
 (ac-define-source semantic-raw
   '((available . (or (require 'semantic-ia nil t)
-                     (require 'semantic/ia nil t)))
+		     (require 'semantic/ia nil t)))
     (candidates . (ac-semantic-candidates ac-prefix))
     (document . ac-semantic-doc)
     (symbol . "s")))
@@ -214,7 +214,7 @@
 (defun ac-eclim-candidates ()
   (with-no-warnings
     (loop for c in (eclim/java-complete)
-          collect (nth 1 c))))
+	  collect (nth 1 c))))
 
 (ac-define-source eclim
   '((candidates . ac-eclim-candidates)
@@ -366,12 +366,12 @@
 
 (defconst ac-css-value-classes
   '((absolute-size "xx-small" "x-small" "small" "medium" "large" "x-large"
-                   "xx-large")
+		   "xx-large")
     (border-style "none" "hidden" "dotted" "dashed" "solid" "double" "groove"
-                  "ridge" "inset" "outset")
+		  "ridge" "inset" "outset")
     (color "aqua" "black" "blue" "fuchsia" "gray" "green" "lime" "maroon" "navy"
-           "olive" "orange" "purple" "red" "silver" "teal" "white" "yellow"
-           "rgb")
+	   "olive" "orange" "purple" "red" "silver" "teal" "white" "yellow"
+	   "rgb")
     (counter "counter")
     (family-name "Courier" "Helvetica" "Times")
     (generic-family "serif" "sans-serif" "cursive" "fantasy" "monospace")
@@ -398,17 +398,17 @@
 (defun ac-css-property-candidates ()
   (let ((list (assoc-default ac-css-property ac-css-property-alist)))
     (if list
-        (loop with seen
-              with value
-              while (setq value (pop list))
-              if (symbolp value)
-              do (unless (memq value seen)
-                   (push value seen)
-                   (setq list
-                         (append list
-                                 (or (assoc-default value ac-css-value-classes)
-                                     (assoc-default (symbol-name value) ac-css-property-alist)))))
-              else collect value)
+	(loop with seen
+	      with value
+	      while (setq value (pop list))
+	      if (symbolp value)
+	      do (unless (memq value seen)
+		   (push value seen)
+		   (setq list
+			 (append list
+				 (or (assoc-default value ac-css-value-classes)
+				     (assoc-default (symbol-name value) ac-css-property-alist)))))
+	      else collect value)
       ac-css-pseudo-classes)))
 
 (ac-define-source css-property
@@ -442,7 +442,7 @@
     (unless ac-ropemacs-loaded
       (pymacs-load "ropemacs" "rope-")
       (if (boundp 'ropemacs-enable-autoimport)
-          (setq ropemacs-enable-autoimport t))
+	  (setq ropemacs-enable-autoimport t))
       (setq ac-ropemacs-loaded t))))
 
 (defun ac-ropemacs-setup ()
@@ -463,30 +463,30 @@
 (defvar ac-source-ropemacs
   '((init
      . (lambda ()
-         (setq ac-ropemacs-completions-cache
-               (mapcar
-                (lambda (completion)
-                  (concat ac-prefix completion))
-                (ignore-errors
-                  (rope-completions))))))
+	 (setq ac-ropemacs-completions-cache
+	       (mapcar
+		(lambda (completion)
+		  (concat ac-prefix completion))
+		(ignore-errors
+		  (rope-completions))))))
     (candidates . ac-ropemacs-completions-cache)))
 
 ;; rcodetools
 
 (defvar ac-source-rcodetools
   '((init . (lambda ()
-              (require 'rcodetools)
-              (condition-case x
-                  (save-excursion
-                    (rct-exec-and-eval rct-complete-command-name "--completion-emacs-icicles"))
-                (error) (setq rct-method-completion-table nil))))
+	      (require 'rcodetools)
+	      (condition-case x
+		  (save-excursion
+		    (rct-exec-and-eval rct-complete-command-name "--completion-emacs-icicles"))
+		(error) (setq rct-method-completion-table nil))))
     (candidates . (lambda ()
-                    (all-completions
-                     ac-prefix
-                     (mapcar
-                      (lambda (completion)
-                        (replace-regexp-in-string "\t.*$" "" (car completion)))
-                      rct-method-completion-table))))))
+		    (all-completions
+		     ac-prefix
+		     (mapcar
+		      (lambda (completion)
+			(replace-regexp-in-string "\t.*$" "" (car completion)))
+		      rct-method-completion-table))))))
 
 
 
