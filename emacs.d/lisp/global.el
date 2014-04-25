@@ -99,3 +99,5 @@
 (setq tramp-default-method "ssh")
 
 (setq frame-title-format '(:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b")))
+
+(setq org-src-fontify-natively t)
