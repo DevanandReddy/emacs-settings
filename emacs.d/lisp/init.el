@@ -33,3 +33,4 @@
 (load "jedi-mode")
 (load "desktop-mode")
 (load "eclim-mode")
+(load "coffee-defaults")
