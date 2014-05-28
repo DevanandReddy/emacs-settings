@@ -84,7 +84,7 @@
 (setq
   ido-ignore-buffers ;; ignore these guys
   '("\\` "  "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
-     "^\*compilation" "^\*GTAGS" "^session\.*" "^\*")
+     "^\*compilation" "^\*GTAGS" "^session\.*");; "^\*")
 
   ido-case-fold  t                 ; be case-insensitive
 
@@ -101,3 +101,8 @@
 (setq frame-title-format '(:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b")))
 
 (setq org-src-fontify-natively t)
+
+(global-auto-revert-mode t)
+;; github flavoured markdown
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(eval-after-load "org"  '(require 'ox-md nil t))

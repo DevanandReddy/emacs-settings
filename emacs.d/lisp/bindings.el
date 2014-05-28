@@ -14,7 +14,7 @@
 (global-set-key [(shift f2)]        'occur)
 
 (global-set-key (kbd "C-c r")       'query-replace)
-(global-set-key (kbd "C-c C-b")       'ecb-activate)
+;; (global-set-key (kbd "C-c C-b")       'ecb-activate)
 
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
