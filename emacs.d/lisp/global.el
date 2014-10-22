@@ -84,7 +84,7 @@
 (setq
   ido-ignore-buffers ;; ignore these guys
   '("\\` "  "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
-     "^\*compilation" "^\*GTAGS" "^session\.*" "^\*")
+     "^\*compilation" "^\*GTAGS" "^session\.*");; "^\*")
 
   ido-case-fold  t                 ; be case-insensitive
 

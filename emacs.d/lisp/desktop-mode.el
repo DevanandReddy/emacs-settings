@@ -73,3 +73,6 @@
   (my-desktop-save "last-session"))
 
 (add-hook 'kill-emacs-hook 'my-desktop-kill-emacs-hook)
+
+(global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
+(global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
