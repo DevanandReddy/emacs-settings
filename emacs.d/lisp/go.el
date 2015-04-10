@@ -2,11 +2,10 @@
 ;;for invoking auto-complete:
 (require 'auto-complete-config)
 
-(add-to-list 'ac-dictionary-directories "elpa/auto-complete-20131128.233/dict")
+(add-to-list 'ac-dictionary-directories "elpa/auto-complete-20150322.813/dict")
 (ac-config-default)
 (require 'go-autocomplete)
-(require 'go-mode-load)
-
+;;(require 'go-mode-load)
 
 
 ;;Also you could setup any combination (for example M-TAB)

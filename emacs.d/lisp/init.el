@@ -14,7 +14,7 @@
 (load "global")
 (load "fonts")
 (load "bindings")
-(load "../elpa/auto-complete-20131128.233/auto-complete")
+(load "../elpa/auto-complete-20150322.813/auto-complete")
 ;;go mode has a dependency on auto-complete
 (load "go")
 (load "web")
@@ -28,7 +28,7 @@
 (require 'textmate)
 (textmate-mode)
 
-(require 'ecb-autoloads)
+;; (require 'ecb-autoloads)
 
 (load "jedi-mode")
 (load "desktop-mode")

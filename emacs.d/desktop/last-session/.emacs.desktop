@@ -2,183 +2,29 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Apr 18 08:00:53 2014
+;; Created Fri Apr 10 10:48:53 2015
 ;; Desktop file format version 206
-;; Emacs version 24.4.50.1
+;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (21329 8709 229310 0) (desktop . "206") "gdr@Devs-MBP.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Monaco-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#f6f3e8") (background-color . "#242424") (line-spacing) (left-fringe . 3) (right-fringe . 4) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#656565") (environment) (frameset--id . "7971-BEE3-F809-76DD") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (display . "Devs-MBP.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 50) (width . 203) (left . 0) (top . 28)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 3) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 70) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 21) (min-pixel-height-safe . 16) (min-pixel-width-safe . 14)) leaf (pixel-width . 1433) (pixel-height . 784) (total-width . 205) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (buffer "gce-intg.org" (selected . t) (hscroll . 92) (fringes 3 4 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 4424) (start . 3085))))])
+(setq desktop-saved-frameset [frameset 1 (21800 3333 792588 658000) (desktop . "206") "gdr@gdr-cpn-ws" nil nil ((((tty-type . "screen-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (cursor-color . "#656565") (right-fringe . 1) (left-fringe . 1) (vertical-scroll-bars) (tool-bar-lines . 0) (background-color . "#242424") (font . "tty") (height . 59) (width . 237) (modeline . t) (unsplittable) (menu-bar-lines . 1) (frameset--id . "7FE8-B94C-7391-E8D1") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 4) (min-pixel-width . 20) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 4) (min-pixel-height-safe . 1) (min-pixel-width-safe . 4)) hc (pixel-width . 237) (pixel-height . 57) (total-width . 237) (total-height . 57) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 118) (pixel-height . 57) (total-width . 118) (total-height . 57) (normal-height . 1.0) (normal-width . 0.5) (buffer "stormregistry.coffee" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 567) (start . 1))) (leaf (last . t) (pixel-width . 119) (pixel-height . 57) (total-width . 119) (total-height . 57) (normal-height . 1.0) (normal-width . 0.5) (buffer "stormregistry.coffee" (selected) (hscroll . 0) (fringes 0 0 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 145) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("ListFlav" "ListImge" "ListImage" "assert" "instancesinsertcall" "Insert" "instancesinsertcall" "instancesservice" "New" "instancesI" "instances" "Instances" "client" "Client" "org" "gooseagent"))
+(setq search-ring '("callbac" "payg" "8a268cce-5110-442e-99eb-8a320158d5b5" "dt qa3 csh vsc" "image" "serviceAn" "md5" "serviceA" "dataURI"))
 (setq regexp-search-ring nil)
-(setq register-alist (list (list 14 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,1597 (get-buffer ,"gce-intg.org")))) mk))))
-(setq file-name-history '("/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/cloudflash.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/gceprovision.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/modules/uproxy-integration.json" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/modules/config.json" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/cloudflash_test.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/gce/client.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/osprovision.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/serverprovision.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/serverprovision_test.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/code.google.com/p/goauth2/oauth/jwt/jwt.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/gce/client.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/client/client.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/gce/compute.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/gce/client.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/gce/client.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/goose_test.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/goose.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/LICENSE" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/COPYING.LESSER" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/COPYING" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/osprovision.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/scheduler/scheduler.go" "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/cloudflash.go" "~/.ido.last" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/serverprovision.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/cache/cache.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/client/client.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/http/client.go" "~/.emacs.d/lisp/init.el" "~/.emacs.d/elpa/exec-path-from-shell-readme.txt" "~/.emacs.d/elpa/archives/melpa/archive-contents" "~/.emacs.d/elpa/archives/gnu/archive-contents" "~/.emacs.d/lisp/global.el" "~/.emacs" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/persistence/models.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/util/util.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/neutron/neutron.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/nova/nova.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/cloudio.go" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/control2.spn.telekom.net.cfg" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/control2.qa.intercloud.net.cfg" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/control1.ems.telekom.net.cfg" "~/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/control2.dev.intercloud.net.cfg"))
+(setq register-alist nil)
+(setq file-name-history '("/home/gdr/Projects/stormstack/stormify/package.json" "~/.emacs.d/ido.last" "~/Projects/emacs-settings/emacs.d/lisp/web.el" "~/.emacs.d/lisp/web.el" "~/Projects/corporate-security-hub/views/shared/account.hbs" "~/Projects/corporate-security-hub/package.json" "~/Projects/corporate-security-hub/src/browser/controllers/account.coffee" "~/Projects/stormstack/stormify/src/stormregistry.coffee" "~/Projects/corporate-security-hub/src/server/controllers/enterprise-user.coffee" "~/Projects/corporate-security-hub/src/server/notification-data-store.coffee" "~/Projects/stormstack/stormify/package.json" "~/Projects/corporate-security-hub/src/server/controllers/enterprise-session.coffee" "~/Projects/corporate-security-hub/node_modules/stormify/src/stormify.coffee" "~/Projects/corporate-security-hub/src/application.coffee" "~/Projects/corporate-security-hub/node_modules/stormify/src/data-store.coffee" "~/Projects/corporate-security-hub/src/server/aaa-data-store.coffee" "~/Projects/corporate-security-hub/src/server/models/certificate.coffee" "~/Projects/corporate-security-hub/src/server/solution-data-store.coffee" "~/.config/openbox/lubuntu-rc.xml" "~/.Xmodmap" "~/Projects/corporate-security-hub/assets/index - English.html"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/gce-intg.org"
-  "gce-intg.org"
-  'org-mode
-  '(linum-mode auto-complete-mode textmate-mode)
-  4424
-  '(4238 nil)
+  "/home/gdr/Projects/stormstack/stormify/src/stormregistry.coffee"
+  "stormregistry.coffee"
+  'coffee-mode
+  '(linum-mode auto-complete-mode textmate-mode magit-auto-revert-mode)
+  567
+  '(699 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/cloudflash.go"
-  "cloudflash.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  6602
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/gceprovision.go"
-  "gceprovision.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  1478
-  '(2076 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/code.google.com/p/google-api-go-client/compute/v1/compute-gen.go"
-  "compute-gen.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  245799
-  '(31094 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/osprovision.go"
-  "osprovision.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  5212
-  '(618 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/serverprovision.go"
-  "serverprovision.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  317
-  '(345 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/nova/nova.go"
-  "nova.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  3657
-  '(4379 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/gce/compute.go"
-  "compute.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  1
-  '(1319 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/modules/uproxy-integration.json"
-  "uproxy-integration.json"
-  'json-mode
-  '(linum-mode textmate-mode)
-  1955
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/etc/modules/config.json"
-  "config.json"
-  'json-mode
-  '(linum-mode textmate-mode)
-  1911
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/provision/cloudflash_test.go"
-  "cloudflash_test.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  508
-  '(508 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/persistence/models.go"
-  "models.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  961
-  '(961 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/launchpad.net/goose/http/client.go"
-  "client.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  1
-  '(7911 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/code.google.com/p/goauth2/oauth/oauth.go"
-  "oauth.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  692
-  '(7749 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/gdr/Projects/workspace/cpn-vsp2.0/cloudio/src/clearpathnet.com/cloudio/scheduler/scheduler.go"
-  "scheduler.go"
-  'go-mode
-  '(linum-mode auto-complete-mode flymake-mode textmate-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 

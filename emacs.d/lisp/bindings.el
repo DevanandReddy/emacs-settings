@@ -85,7 +85,8 @@
 (global-set-key (kbd "M-B") 'backward-to-word)
 
 ;; Personal textmate.el bindings
-(global-set-key (kbd "C-c f") 'textmate-goto-file)
+(global-set-key (kbd "C-c f") 'fiplr-find-file)
+;; (global-set-key (kbd "C-c f") 'textmate-goto-file)
 (global-set-key [(control return)] 'textmate-next-line)
 
 ;; Tags

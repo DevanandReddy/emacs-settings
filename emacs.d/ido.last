@@ -1,0 +1,103 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/gdr/.emacs.d/" . "lisp/")
+ ("/home/gdr/Projects/corporate-security-hub/src/browser/" . "controllers/")
+ ("/home/gdr/Projects/stormstack/" . "stormify/")
+ ("/home/gdr/Projects/" . "corporate-security-hub/")
+ ("/home/gdr/Projects/corporate-security-hub/node_modules/stormify/" . "src/")
+ ("/home/gdr/Projects/corporate-security-hub/node_modules/" . "stormify/")
+ ("/home/gdr/Projects/corporate-security-hub/src/" . "server/")
+ ("/home/gdr/Projects/corporate-security-hub/" . "src/")
+ ("/home/gdr/Projects/stormstack/stormregistry/" . "src/")
+ ("/home/gdr/Projects/stormstack/stormify/" . "src/")
+ ("/home/gdr/Projects/corporate-security-hub/src/server/" . "controllers/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/gdr/Projects/corporate-security-hub/"
+ "/home/gdr/Projects/corporate-security-hub/scripts/"
+ "/home/gdr/Projects/corporate-security-hub/src/server/assets/"
+ "/home/gdr/Projects/stormstack/stormify/"
+ "/home/gdr/Projects/corporate-security-hub/src/browser/controllers/"
+ "/home/gdr/.emacs.d/lisp/"
+ "/home/gdr/Projects/corporate-security-hub/src/server/controllers/"
+ "/home/gdr/Projects/corporate-security-hub/src/server/"
+ "/home/gdr/Projects/stormstack/stormify/src/"
+ "/home/gdr/Projects/corporate-security-hub/node_modules/stormify/src/"
+ "/home/gdr/Projects/corporate-security-hub/src/"
+ "/home/gdr/Projects/corporate-security-hub/src/server/models/"
+ "/home/gdr/Projects/stormstack/stormregistry/src/"
+ "/home/gdr/.config/openbox/"
+ "~/.config/openbox/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "package.json"
+ "prepublish.sh"
+ "system-defaults.coffee"
+ "account.coffee"
+ "web.el"
+ "enterprise-user.coffee"
+ "notification-data-store.coffee"
+ "stormregistry.coffee"
+ "stormify.coffee"
+ "enterprise-session.coffee"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/gdr/Projects/corporate-security-hub/" (21799 5794 361899 735000) "node_modules/" "assets/" "scripts/" "bower.json" ".components.chksum" "views/" "public/" "i18n/" "README.md" "images/" "testcases/" "components/" "bower_components/" "src/" ".git/" "package.json" "build.xml" ".gitignore" "lib/" "build/" "../" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/scripts/" (21799 6657 788018 316000) "prepublish.sh" "../" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/server/assets/" (21799 5858 382649 594000) "web-categories.coffee" "stormlight-metapolicy.coffee" "system-defaults.coffee" "../" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/server/controllers/" (21798 57814 368725 932000) "enterprise-account.coffee" "enterprise-device.coffee" "certificate.coffee" "enterprise-service-domain.coffee" "enterprise-session.coffee" "enterprise-policy.coffee" "../" "enterprise-service-gateway.coffee" "enterprise-policy-config.coffee" "enterprise-group.coffee" "./" "enterprise-user.coffee")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/browser/" (21798 57814 364725 882000) "demo/" "controllers/" "app.coffee" "components.coffee" "views.coffee" "helpers/" "controllers.coffee" "components/" "store.coffee" "models/" "router.coffee" "models.coffee" "routes/" "../" "./")
+
+ ("/home/gdr/Projects/stormstack/stormify/src/" (21798 63588 402962 765000) "stormify.coffee" "stormregistry.coffee" "../" "data-store.coffee" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/browser/controllers/" (21798 57913 129913 941000) "group.coffee" "policy-config.coffee" "web-category.coffee" "users/" "charts/" "login.coffee" "account.coffee" "devices/" "policies/" "groups/" "users.coffee" "security-profile.coffee" "device.coffee" "policies.coffee" "policy.coffee" "user.coffee" "subscription.coffee" "groups.coffee" "devices.coffee" "deleted.coffee" "../" "account/" "policy-change.coffee" "home.coffee" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/browser/helpers/" (21798 55748 887877 631000) "vertex-auth.coffee" "securedRoute.coffee" "validator.coffee" "momentize.coffee" "../" "growl-notify.coffee" "auth.coffee" "json-serializer.coffee" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/server/" (21798 55748 891877 682000) "usg.coffee" "assets/" "controllers/" "solution-data-store.coffee" "stormforge-data-store.coffee" "helpers/" "enterprise-data-store.coffee" "vertex-authenticator.coffee" "models/" "aaa-data-store.coffee" "adapters/" "../" "./" "notification-data-store.coffee")
+
+ ("/home/gdr/.emacs.d/lisp/" (21791 1978 104462 522000) "url/" "fonts.el" "jedi-mode.el" "desktop-mode.el" "eshell/" "misc.el" "goflymake/" "go.el" "coffee-mode-defaults.el" "ac-comphist.dat" "eclim-mode.el" "init.el~" "tramp" "coffee-defaults.el" "../" "textmate.el" "global.el" "init.el" "bindings.el" "./" "web.el")
+
+ ("/home/gdr/.emacs.d/" (21798 48829 864472 501000) "url/" "recentf" "eshell/" "backups/" "auto-save-list/" "elpa/" "ac-comphist.dat" "ido.last" "desktop/" "../" "lisp/" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/views/shared/" (21798 55748 891877 682000) "recover.hbs" "user.hbs" "application.hbs" "navigation.hbs" "home/" "login.hbs" "users/" "not-found.hbs" "device-unique-info.hbs" "users.hbs" "components/" "devices/" "policies/" "groups/" "policy.hbs" "policies.hbs" "index.hbs" "platform-admin.hbs" "account.hbs" "account-info.hbs" "account-license-usage.hbs" "policy-config.hbs" "../" "groups.hbs" "download.hbs" "devices.hbs" "account/" "home.hbs" "register.hbs" "./")
+
+ ("/home/gdr/Projects/stormstack/stormify/" (21798 52275 915854 572000) "node_modules/" "README.md" "examples/" "src/" ".git/" "package.json" ".gitignore" "lib/" "../" "./")
+
+ ("/home/gdr/Projects/stormstack/" (21795 600 984090 256000) "stormdata/" "stormify/" "../" "stormregistry/" "./")
+
+ ("/home/gdr/Projects/" (21791 2135 390563 298000) "stormstack/" "go-lang-bins/" "emacs-settings/" "../" "corporate-security-hub/" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/node_modules/stormify/src/" (21797 39184 132302 602000) "stormify.coffee" "#stormregistry.coffee#" "stormregistry.coffee" ".#stormregistry.coffee" "../" "data-store.coffee" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/node_modules/stormify/" (21790 59624 23109 214000) "node_modules/" ".npmignore" "README.md" "examples/" "src/" "package.json" "lib/" "../" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/node_modules/" (21790 59637 471147 304000) "handlebars/" "express-handlebars/" "request/" "node-uuid/" "fsmonitor/" "browserify/" "passport-anonymous/" "bower-installer/" "promise/" "stormify/" "chai/" "browserify-shim/" "debowerify/" "json2csv/" "passport/" "bunyan/" "async/" "fmerge/" ".bin/" "uglifyify/" "sinon/" "minimist/" "ember-template-compiler/" "body-parser/" "coffee-script/" "minify/" "../" "mocha/" "errorhandler/" "zappajs/" "passport-http-bearer/" "nodemailer/" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/" (21790 57274 729243 604000) "enterprise.coffee" "browser/" "browser-components.coffee" "application.coffee" "server/" "../" "./")
+
+ ("/home/gdr/Projects/corporate-security-hub/src/server/models/" (21794 63494 895810 53000) "stormforge-resource.coffee" "aaa-identity.coffee" "enterprise-stat.coffee" "stormforge-resource-element.coffee" "enterprise-account.coffee" "enterprise-service-analytics.coffee" "notification-template.coffee" "notification-attachment.coffee" "enterprise-device.coffee" "enterprise-web-category.coffee" "enterprise-service-analyzer.coffee" "enterprise-web-domain.coffee" "enterprise-policy-change.coffee" "enterprise-company.coffee" "certificate.coffee" "solution-product.coffee" "enterprise-notification-mail.coffee" "enterprise-service-domain.coffee" "stormforge-asset.coffee" "enterprise-session.coffee" "enterprise-security-profile.coffee" "enterprise-policy.coffee" "certificate-signer.coffee" "solution-control-provider.coffee" "solution.coffee" "../" "enterprise-service-agent.coffee" "notification-transport.coffee" "enterprise-service-gateway.coffee" "enterprise-notify.coffee" "enterprise-mobile-config.coffee" "enterprise-policy-config.coffee" "solution-service-description.coffee" "solution-subscription.coffee" "stormforge-resource-provider.coffee" "aaa-token.coffee" "enterprise-group.coffee" "./" "enterprise-user.coffee")
+
+ ("/home/gdr/Projects/stormstack/stormregistry/src/" (21791 5488 4295 757000) "stormregistry.coffee" "../" "./")
+
+ ("/home/gdr/Projects/stormstack/stormregistry/" (21791 5488 4295 757000) "LICENSE" "README.md" "src/" ".git/" "package.json" ".gitignore" "lib/" "../" "./")
+
+ ("~/.config/openbox/" (21794 62475 972768 475000) "lubuntu-rc.xml" "../" "./")
+
+ ("/home/gdr/.config/openbox/" (21794 62475 972768 475000) "lubuntu-rc.xml" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

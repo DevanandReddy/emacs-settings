@@ -118,3 +118,5 @@
 	  (rename-file filename new-name t)
 	  (set-visited-file-name new-name t t)))))))
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules"))
+			    (files ("*.jpg" "*.png" "*.zip" "*~"))))
