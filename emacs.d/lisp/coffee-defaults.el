@@ -5,18 +5,19 @@
 
 (require 'whitespace)
 (add-hook 'coffee-mode-hook
-	  (function (lambda()
-		      (whitespace-mode t))))
+          (function (lambda()
+                      (whitespace-mode t))))
 
-;; This gives you a tab of 2 spaces
 (custom-set-variables
+ '(coffee-args-compile (quote ("-c" "--bare")))
  '(coffee-tab-width 4)
- '(coffee-args-compile '("-c" "--bare")))
-
-(setq coffee-indent-tabs-mode 1)
+ '(column-number-mode t))
 
 (add-hook 'coffee-mode-hook (lambda ()
-			      (local-set-key (kbd "C-c C-s") 'coffee-compile-region)))
+                              (local-set-key (kbd "C-c C-s") 'coffee-compile-region)))
 
 (add-hook 'coffee-mode-hook (lambda ()
-			      (local-set-key (kbd "C-c C-f") 'coffee-compile-buffer)))
+                              (local-set-key (kbd "C-c C-f") 'coffee-compile-buffer)))
+
+
+(add-to-list 'auto-mode-alist '("\\.litcoffee\\'" . coffee-mode))

@@ -2,29 +2,40 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Apr 10 10:48:53 2015
+;; Created Fri Sep 11 15:48:16 2015
 ;; Desktop file format version 206
-;; Emacs version 24.4.1
+;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (21800 3333 792588 658000) (desktop . "206") "gdr@gdr-cpn-ws" nil nil ((((tty-type . "screen-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (cursor-color . "#656565") (right-fringe . 1) (left-fringe . 1) (vertical-scroll-bars) (tool-bar-lines . 0) (background-color . "#242424") (font . "tty") (height . 59) (width . 237) (modeline . t) (unsplittable) (menu-bar-lines . 1) (frameset--id . "7FE8-B94C-7391-E8D1") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 4) (min-pixel-width . 20) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 4) (min-pixel-height-safe . 1) (min-pixel-width-safe . 4)) hc (pixel-width . 237) (pixel-height . 57) (total-width . 237) (total-height . 57) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 118) (pixel-height . 57) (total-width . 118) (total-height . 57) (normal-height . 1.0) (normal-width . 0.5) (buffer "stormregistry.coffee" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 567) (start . 1))) (leaf (last . t) (pixel-width . 119) (pixel-height . 57) (total-width . 119) (total-height . 57) (normal-height . 1.0) (normal-width . 0.5) (buffer "stormregistry.coffee" (selected) (hscroll . 0) (fringes 0 0 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 145) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22003 23088 305328 51000) (desktop . "206") "gdr@gdr-cpn-ws" nil nil ((((tty-type . "screen-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (cursor-color . "#656565") (vertical-scroll-bars) (tool-bar-lines . 0) (background-color . "#242424") (font . "tty") (height . 53) (width . 207) (modeline . t) (unsplittable) (menu-bar-lines . 1) (frameset--id . "4464-A3D2-EF70-A53C") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 207) (pixel-height . 51) (total-width . 207) (total-height . 51) (normal-height . 1.0) (normal-width . 1.0) (buffer "pom.xml<ietf-ted>" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 4) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("callbac" "payg" "8a268cce-5110-442e-99eb-8a320158d5b5" "dt qa3 csh vsc" "image" "serviceAn" "md5" "serviceA" "dataURI"))
+(setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("/home/gdr/Projects/stormstack/stormify/package.json" "~/.emacs.d/ido.last" "~/Projects/emacs-settings/emacs.d/lisp/web.el" "~/.emacs.d/lisp/web.el" "~/Projects/corporate-security-hub/views/shared/account.hbs" "~/Projects/corporate-security-hub/package.json" "~/Projects/corporate-security-hub/src/browser/controllers/account.coffee" "~/Projects/stormstack/stormify/src/stormregistry.coffee" "~/Projects/corporate-security-hub/src/server/controllers/enterprise-user.coffee" "~/Projects/corporate-security-hub/src/server/notification-data-store.coffee" "~/Projects/stormstack/stormify/package.json" "~/Projects/corporate-security-hub/src/server/controllers/enterprise-session.coffee" "~/Projects/corporate-security-hub/node_modules/stormify/src/stormify.coffee" "~/Projects/corporate-security-hub/src/application.coffee" "~/Projects/corporate-security-hub/node_modules/stormify/src/data-store.coffee" "~/Projects/corporate-security-hub/src/server/aaa-data-store.coffee" "~/Projects/corporate-security-hub/src/server/models/certificate.coffee" "~/Projects/corporate-security-hub/src/server/solution-data-store.coffee" "~/.config/openbox/lubuntu-rc.xml" "~/.Xmodmap" "~/Projects/corporate-security-hub/assets/index - English.html"))
+(setq file-name-history '("~/Projects/scala-tutorials/yangtools-release-lithium-sr1/" "~/Projects/emacs-settings/emacs.d/ido.last" "~/.emacs.d/ido.last" "~/Projects/csh-projects/scala-yangtools/build.sbt" "~/Projects/csh-projects/scala-yangtools/src/main/scala/com/inocybe/ScalaYangTools.scala" "~/Projects/csh-projects/scala-yangtools/.ensime" "~/Projects/scala-tutorials/yangtools-release-lithium-sr1/code-generator/binding-java-api-generator/pom.xml" "~/Projects/scala-tutorials/yangtools-release-lithium-sr1/code-generator/pom.xml" "~/Projects/scala-tutorials/yangtools-release-lithium-sr1/model/ietf/ietf-inet-types/target/generated-sources/sal/org/opendaylight/yang/gen/v1/urn/ietf/params/xml/ns/yang/ietf/inet/types/rev100924/PortNumber.java" "~/Projects/csh-projects/unified-solution-gateway/src/controllers/container-resource.coffee" "~/Projects/csh-projects/unified-solution-gateway/src/models/container-resource.coffee" "~/Projects/csh-projects/unified-solution-gateway/src/usg.coffee" "~/Projects/csh-projects/unified-solution-gateway/src/controllers/service-group.coffee" "~/Projects/csh-projects/unified-solution-gateway/public/js/app.js" "~/Projects/csh-projects/unified-solution-gateway/public/js/controllers/service-group.js" "~/Projects/csh-projects/unified-solution-gateway/public/views/service-group/add-vnf.html" "~/Projects/csh-projects/unified-solution-gateway/public/js/controllers/service-container.js" "~/Projects/csh-projects/unified-solution-gateway/public/views/service-group/landing.html" "~/Projects/csh-projects/unified-solution-gateway/public/js/controllers/navi.js" "~/Projects/csh-projects/unified-solution-gateway/public/views/service-container/create.html" "~/Projects/csh-projects/unified-solution-gateway/public/views/service-container/list.html"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/home/gdr/Projects/stormstack/stormify/src/stormregistry.coffee"
-  "stormregistry.coffee"
-  'coffee-mode
-  '(linum-mode auto-complete-mode textmate-mode magit-auto-revert-mode)
-  567
-  '(699 nil)
+  "/home/gdr/Projects/scala-tutorials/yangtools-release-lithium-sr1/model/ietf/ietf-ted/pom.xml"
+  "pom.xml"
+  'nxml-mode
+  '(linum-mode textmate-mode)
+  1
+  '(1954 nil)
   nil
   nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/gdr/Projects/scala-tutorials/yangtools-release-lithium-sr1/model/pom.xml"
+  "pom.xml"
+  'nxml-mode
+  '(linum-mode textmate-mode)
+  2408
+  '(1318 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
 

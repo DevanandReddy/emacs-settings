@@ -14,7 +14,7 @@
 (load "global")
 (load "fonts")
 (load "bindings")
-(load "../elpa/auto-complete-20150322.813/auto-complete")
+(load "../elpa/auto-complete-20150618.1949/auto-complete")
 ;;go mode has a dependency on auto-complete
 (load "go")
 (load "web")
@@ -23,6 +23,7 @@
 (load "goflymake/go-flycheck")
 (require 'go-flymake)
 (require 'go-flycheck)
+(load "oracle")
 
 (load "textmate")
 (require 'textmate)
@@ -32,5 +33,6 @@
 
 (load "jedi-mode")
 (load "desktop-mode")
-(load "eclim-mode")
-(load "coffee-mode-defaults")
+;; (load "eclim-mode")
+(load "coffee-defaults")
+(xclip-mode 1)

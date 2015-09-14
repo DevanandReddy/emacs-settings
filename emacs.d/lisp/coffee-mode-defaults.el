@@ -17,3 +17,4 @@
 
 (add-to-list 'ac-modes 'coffee-mode)
 (global-auto-complete-mode t)
+(add-to-list 'auto-mode-alist '("\\.litcoffee\\'" . coffee-mode))

@@ -24,7 +24,7 @@
 ;; (display-battery-mode 1)
 
 ;; Small fringes
-(set-fringe-mode '(1 . 1))
+;;(set-fringe-mode '(1 . 1))
 
 ;; Emacs gurus don't need no stinking scroll bars
 (when (fboundp 'toggle-scroll-bar)
@@ -43,7 +43,7 @@
 ;; Make sure all backup files only live in one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
-;; Gotta see matching parens
+;; Gotta see matching arens
 (show-paren-mode t)
 
 ;; Don't truncate lines
@@ -57,8 +57,8 @@
 (defvar whitespace-cleanup-on-save t)
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
-	  (lambda ()
-	    (if whitespace-cleanup-on-save (whitespace-cleanup))))
+          (lambda ()
+            (if whitespace-cleanup-on-save (whitespace-cleanup))))
 
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
@@ -78,7 +78,7 @@
 
 (defadvice compile (around split-horizontally activate)
   (let ((split-width-threshold nil)
-	(split-height-threshold 0))
+        (split-height-threshold 0))
     ad-do-it))
 ;; "^\*Mess"
 (setq
@@ -103,20 +103,20 @@
 (setq org-src-fontify-natively t)
 
 (setq tab-width 4)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 (defun rename-file-and-buffer ()
   "Rename the current buffer and file it is visiting."
   (interactive)
   (let ((filename (buffer-file-name)))
     (if (not (and filename (file-exists-p filename)))
-	(message "Buffer is not visiting a file!")
+        (message "Buffer is not visiting a file!")
       (let ((new-name (read-file-name "New name: " filename)))
-	(cond
-	 ((vc-backend filename) (vc-rename-file filename new-name))
-	 (t
-	  (rename-file filename new-name t)
-	  (set-visited-file-name new-name t t)))))))
+        (cond
+         ((vc-backend filename) (vc-rename-file filename new-name))
+         (t
+          (rename-file filename new-name t)
+          (set-visited-file-name new-name t t)))))))
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules"))
-			    (files ("*.jpg" "*.png" "*.zip" "*~"))))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
