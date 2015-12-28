@@ -33,9 +33,9 @@
 ;; Version control and change related
 ;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
 ;(global-set-key [(control meta f9)] (lambda () (interactive) (svn-status default-directory)))
-(global-set-key [(control f9)] (lambda () (interactive) (magit-status default-directory)))
-(global-set-key [(f9)]         (lambda () (interactive) (magit-status default-directory)))
-(global-set-key [(meta f9)]    'autotest-switch)  ;; Move to ruby/rails mode?
+(global-set-key [(control f9)] 'magit-push)
+(global-set-key [(f9)]         'magit-status)
+(global-set-key [(meta f9)]    'magit-pull)
 
 ;; map the window manipulation keys to meta 0, 1, 2, o
 (global-set-key (kbd "M-3") 'split-window-horizontally) ; was digit-argument
@@ -44,7 +44,7 @@
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
 
-(global-set-key (kbd "M-O") 'rotate-windows)
+;; (global-set-key (kbd "M-O") 'rotate-windows)
 
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
@@ -69,9 +69,6 @@
 ;; Find matching parens
 (global-set-key (kbd "C-'") 'match-paren)
 
-;; Easy inserts
-(global-set-key (kbd "C-.") 'insert-arrow)
-
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -86,8 +83,6 @@
 
 ;; Personal textmate.el bindings
 (global-set-key (kbd "C-c f") 'fiplr-find-file)
-;; (global-set-key (kbd "C-c f") 'textmate-goto-file)
-(global-set-key [(control return)] 'textmate-next-line)
 
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue

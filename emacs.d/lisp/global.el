@@ -1,7 +1,7 @@
 ;; key bindings
 (setq mac-command-modifier (quote control))
 (setq mac-control-modifier (quote super))
-
+(menu-bar-mode -1)
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
 
