@@ -7,10 +7,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(coffee-args-compile (quote ("-c" "--bare")))
  '(coffee-tab-width 4)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes (quote (misterioso)))
  '(custom-safe-themes
    (quote
     ("bed4d169698488b8b5b90f7dbdbaca2e7b9c4a18727adbb7b3ddcb4df0577ce0" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
@@ -25,9 +27,32 @@
  '(eclim-eclipse-dirs
    (quote
     ("/Users/gdr/Applications/springsource/sts-3.4.0.RELEASE")))
+ '(ergoemacs-ctl-c-or-ctl-x-delay 0.2)
+ '(ergoemacs-handle-ctl-c-or-ctl-x (quote both))
+ '(ergoemacs-ini-mode t)
+ '(ergoemacs-keyboard-layout "us")
+ '(ergoemacs-mode nil)
+ '(ergoemacs-smart-paste nil)
+ '(ergoemacs-theme "standard")
+ '(ergoemacs-theme-options (quote ((guru on))))
+ '(ergoemacs-use-menus t)
  '(fci-rule-color "#232A2F")
+ '(initial-scratch-message
+   ";; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+")
+ '(js-indent-level 2)
+ '(js2-basic-offset 2)
+ '(json-reformat:indent-width 2)
+ '(recentf-menu-before "Open File...")
  '(safe-local-variable-values (quote ((project-venv-name . "py3django"))))
+ '(scroll-error-top-bottom nil)
+ '(set-mark-command-repeat-pop nil)
+ '(shift-select-mode t)
  '(show-paren-mode t)
+ '(tab-width 4)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#2B3B40")
  '(vc-annotate-color-map
