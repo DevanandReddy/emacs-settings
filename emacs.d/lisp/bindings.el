@@ -1,5 +1,4 @@
 ;; http://xahlee.org/emacs/keyboard_shortcuts.html
-
 ;; Window manipulation
 (global-set-key [(control kp-6)] 'enlarge-window-horizontally)
 (global-set-key [(control kp-4)] 'shrink-window-horizontally)
@@ -14,6 +13,7 @@
 (global-set-key [(shift f2)]        'occur)
 
 (global-set-key (kbd "C-c r")       'query-replace)
+(global-set-key (kbd "C-c C-s")     'rgrep)
 ;; (global-set-key (kbd "C-c C-b")       'ecb-activate)
 
 ;; Keyboard macros
@@ -25,14 +25,13 @@
 (global-set-key [(control f5)] 'revbufs)
 
 ;; Indenting and alignment
-(global-set-key [(f8)]         'indent-region)
-(global-set-key [(control f8)] 'align)
-(global-set-key [(shift f8)]   'align-current)
-(global-set-key [(meta f8)]    'align-regexp)
+;; (global-set-key [(f8)]         'indent-region)
+;; (global-set-key [(control f8)] 'align)
+;; (global-set-key [(shift f8)]   'align-current)
+;; (global-set-key [(meta f8)]    'align-regexp)
+(global-set-key [(f8)] 'neotree-toggle)
 
 ;; Version control and change related
-;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
-;(global-set-key [(control meta f9)] (lambda () (interactive) (svn-status default-directory)))
 (global-set-key [(control f9)] 'magit-push)
 (global-set-key [(f9)]         'magit-status)
 (global-set-key [(meta f9)]    'magit-pull)
@@ -43,7 +42,7 @@
 (global-set-key (kbd "M-1") 'delete-other-windows) ; was digit-argument
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
-
+(global-set-key (kbd "M-p") 'ace-window)
 ;; (global-set-key (kbd "M-O") 'rotate-windows)
 
 ;; Replace dired's M-o
@@ -88,7 +87,7 @@
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
 
 ;; Goto Line
-;;(global-set-key [remap goto-line] 'goto-line-with-feedback)
+;; (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
 ;; Whitespace management
 (global-set-key (kbd "s-\\") 'fixup-whitespace)

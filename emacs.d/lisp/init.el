@@ -22,7 +22,7 @@
 (load "global")
 (load "fonts")
 (load "bindings")
-;; (load "../elpa/auto-complete-20150618.1949/auto-complete")
+
 ;;go mode has a dependency on auto-complete
 (load "go")
 (load "web")
@@ -39,10 +39,11 @@
 
 ;; (require 'ecb-autoloads)
 
-(load "jedi-mode")
+;; (load "jedi-mode")
 (load "desktop-mode")
 ;; (load "eclim-mode")
 (load "coffee-defaults")
-(xclip-mode 1)
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+(powerline-default-theme)
