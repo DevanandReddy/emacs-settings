@@ -1,11 +1,11 @@
 ;;; flymake-python-pyflakes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (flymake-python-pyflakes-load) "flymake-python-pyflakes"
-;;;;;;  "flymake-python-pyflakes.el" (21285 31907 0 0))
-;;; Generated autoloads from flymake-python-pyflakes.el
+;;;### (autoloads nil "flymake-python-pyflakes" "../../../../../.emacs.d/elpa/flymake-python-pyflakes-20131127.6/flymake-python-pyflakes.el"
+;;;;;;  "b722784c0ec2005f6595511bc750ff52")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/flymake-python-pyflakes-20131127.6/flymake-python-pyflakes.el
 
 (autoload 'flymake-python-pyflakes-load "flymake-python-pyflakes" "\
 Configure flymake mode to check the current buffer's python syntax using pyflakes.
@@ -14,16 +14,15 @@ Configure flymake mode to check the current buffer's python syntax using pyflake
 
 ;;;***
 
-;;;### (autoloads nil nil ("flymake-python-pyflakes-pkg.el") (21285
-;;;;;;  31907 123594 0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/flymake-python-pyflakes-20131127.6/flymake-python-pyflakes-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/flymake-python-pyflakes-20131127.6/flymake-python-pyflakes.el")
+;;;;;;  (22377 44558 300194 0))
 
 ;;;***
 
-(provide 'flymake-python-pyflakes-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; flymake-python-pyflakes-autoloads.el ends here

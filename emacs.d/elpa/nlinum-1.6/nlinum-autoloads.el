@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "nlinum" "nlinum.el" (21791 23 133149 57000))
-;;; Generated autoloads from nlinum.el
+;;;### (autoloads nil "nlinum" "../../../../../.emacs.d/elpa/nlinum-1.6/nlinum.el"
+;;;;;;  "b870a559885f0aade602e66cd4bebf21")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/nlinum-1.6/nlinum.el
 
 (autoload 'nlinum-mode "nlinum" "\
 Toggle display of line numbers in the left margin (Linum mode).
@@ -36,6 +37,12 @@ Nlinum mode is enabled in all buffers where
 See `nlinum-mode' for more information on Nlinum mode.
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/nlinum-1.6/nlinum-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/nlinum-1.6/nlinum.el") (22377
+;;;;;;  44580 970704 0))
 
 ;;;***
 

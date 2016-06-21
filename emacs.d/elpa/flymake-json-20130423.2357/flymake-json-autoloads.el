@@ -1,11 +1,11 @@
 ;;; flymake-json-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (flymake-json-maybe-load flymake-json-load) "flymake-json"
-;;;;;;  "flymake-json.el" (21206 57792 0 0))
-;;; Generated autoloads from flymake-json.el
+;;;### (autoloads nil "flymake-json" "../../../../../.emacs.d/elpa/flymake-json-20130423.2357/flymake-json.el"
+;;;;;;  "c380b2291b46581f56014c6427a577ff")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/flymake-json-20130423.2357/flymake-json.el
 
 (autoload 'flymake-json-load "flymake-json" "\
 Configure flymake mode to check the current buffer's javascript syntax.
@@ -19,16 +19,15 @@ Call `flymake-json-load' if this file appears to be json.
 
 ;;;***
 
-;;;### (autoloads nil nil ("flymake-json-pkg.el") (21206 57792 143650
-;;;;;;  0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/flymake-json-20130423.2357/flymake-json-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/flymake-json-20130423.2357/flymake-json.el")
+;;;;;;  (22377 44557 199481 0))
 
 ;;;***
 
-(provide 'flymake-json-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; flymake-json-autoloads.el ends here

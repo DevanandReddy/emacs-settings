@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "go-errcheck" "go-errcheck.el" (21984 55112
-;;;;;;  70851 281000))
-;;; Generated autoloads from go-errcheck.el
+;;;### (autoloads nil "go-errcheck" "../../../../../.emacs.d/elpa/go-errcheck-20150828.1135/go-errcheck.el"
+;;;;;;  "f142401ea891fc99e60e17f83b10fc24")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/go-errcheck-20150828.1135/go-errcheck.el
 
 (autoload 'go-errcheck "go-errcheck" "\
 Run errcheck on the current buffer's directory and display the
@@ -20,6 +20,12 @@ can be specified as arguments. If DIRECTORY is nil, it will
 default to the buffer's directory.
 
 \(fn DIRECTORY IGNOREPKG IGNORE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/go-errcheck-20150828.1135/go-errcheck-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/go-errcheck-20150828.1135/go-errcheck.el")
+;;;;;;  (22377 44565 484784 0))
 
 ;;;***
 

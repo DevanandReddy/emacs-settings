@@ -3,7 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("flymake-easy.el") (21791 34 431267 786000))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/flymake-easy-20140818.55/flymake-easy-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/flymake-easy-20140818.55/flymake-easy.el")
+;;;;;;  (22377 44555 6325 0))
 
 ;;;***
 
