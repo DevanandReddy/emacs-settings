@@ -45,7 +45,7 @@
   (interactive)
   (let ((name (my-desktop-get-current-name)))
     (if name
-	(message (concat "Desktop name: " name))
+    (message (concat "Desktop name: " name))
       (message "No named desktop loaded"))))
 
 (defun my-desktop-get-current-name ()
@@ -53,26 +53,23 @@
   (when desktop-dirname
     (let ((dirname (substring desktop-dirname 0 -1)))
       (when (string= (file-name-directory dirname) my-desktop-session-dir)
-	(file-name-nondirectory dirname)))))
+    (file-name-nondirectory dirname)))))
 
 (defun my-desktop-get-session-name (prompt &optional use-default)
   "Get a session name."
   (let* ((default (and use-default (my-desktop-get-current-name)))
-	 (full-prompt (concat prompt (if default
-					 (concat " (default " default "): ")
-				       ": "))))
+     (full-prompt (concat prompt (if default
+                     (concat " (default " default "): ")
+                       ": "))))
     (completing-read full-prompt (and (file-exists-p my-desktop-session-dir)
-				      (directory-files my-desktop-session-dir))
-		     nil nil nil my-desktop-session-name-hist default)))
+                      (directory-files my-desktop-session-dir))
+             nil nil nil my-desktop-session-name-hist default)))
 
 (defun my-desktop-kill-emacs-hook ()
   "Save desktop before killing emacs."
   (when (file-exists-p (concat my-desktop-session-dir "last-session"))
     (setq desktop-file-modtime
-	  (nth 5 (file-attributes (desktop-full-file-name (concat my-desktop-session-dir "last-session"))))))
+      (nth 5 (file-attributes (desktop-full-file-name (concat my-desktop-session-dir "last-session"))))))
   (my-desktop-save "last-session"))
 
 (add-hook 'kill-emacs-hook 'my-desktop-kill-emacs-hook)
-
-(global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
-(global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
