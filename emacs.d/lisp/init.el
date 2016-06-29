@@ -1,4 +1,4 @@
-(load 'ensure-packages)
+(load "ensure-packages")
 ;;(require 'ergoemacs-mode)
 
 ;;(setq ergoemacs-theme nil)
@@ -19,7 +19,7 @@
 ;; (load "goflymake/go-flycheck")
 ;; (require 'go-flymake)
 ;; (require 'go-flycheck)
-(load "oracle")
+;;(load "oracle")
 
 ;; (load "textmate")
 ;; (require 'textmate)
