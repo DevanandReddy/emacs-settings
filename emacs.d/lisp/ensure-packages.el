@@ -47,6 +47,7 @@
         helm
         helm-core
         htmlize
+        jedi
         json-mode
         json-reformat
         json-snatcher
@@ -65,6 +66,7 @@
         sublime-themes
         tao-theme
         ujelly-theme
+        virtualenvwrapper
         web-beautify
         web-mode
         window-numbering

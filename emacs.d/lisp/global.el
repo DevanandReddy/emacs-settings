@@ -1,7 +1,7 @@
 ;; key bindings
 (setq mac-command-modifier (quote control))
 (setq mac-control-modifier (quote super))
-(menu-bar-mode 1)
+(menu-bar-mode t)
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
 
@@ -57,8 +57,8 @@
 (defvar whitespace-cleanup-on-save t)
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
-      (lambda ()
-        (if whitespace-cleanup-on-save (whitespace-cleanup))))
+          (lambda ()
+            (if whitespace-cleanup-on-save (whitespace-cleanup))))
 
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
@@ -78,19 +78,19 @@
 
 (defadvice compile (around split-horizontally activate)
   (let ((split-width-threshold nil)
-    (split-height-threshold 0))
+        (split-height-threshold 0))
     ad-do-it))
 ;; "^\*Mess"
 (setq
-  ido-ignore-buffers ;; ignore these guys
-  '("\\` "  "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
-     "^\*compilation" "^\*GTAGS" "^session\.*");; "^\*")
+ ido-ignore-buffers ;; ignore these guys
+ '("\\` "  "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
+   "^\*compilation" "^\*GTAGS" "^session\.*");; "^\*")
 
-  ido-case-fold  t                 ; be case-insensitive
+ ido-case-fold  t                 ; be case-insensitive
 
-  ido-enable-last-directory-history t ; remember last used dirs
-  ido-max-work-directory-list 30   ; should be enough
-)
+ ido-enable-last-directory-history t ; remember last used dirs
+ ido-max-work-directory-list 30   ; should be enough
+ )
 
 (require 'ibuf-ext)
 (add-to-list 'ibuffer-never-show-predicates "^\\*")
@@ -110,17 +110,16 @@
   (interactive)
   (let ((filename (buffer-file-name)))
     (if (not (and filename (file-exists-p filename)))
-    (message "Buffer is not visiting a file!")
+        (message "Buffer is not visiting a file!")
       (let ((new-name (read-file-name "New name: " filename)))
-    (cond
-     ((vc-backend filename) (vc-rename-file filename new-name))
-     (t
-      (rename-file filename new-name t)
-      (set-visited-file-name new-name t t)))))))
+        (cond
+         ((vc-backend filename) (vc-rename-file filename new-name))
+         (t
+          (rename-file filename new-name t)
+          (set-visited-file-name new-name t t)))))))
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules" "vendor" "pkg" "bin"))
-                (files ("*.jpg" "*.png" "*.zip" "*~"))))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-(powerline-default-theme)
