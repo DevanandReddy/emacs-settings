@@ -3,7 +3,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 ;;; Code;This file checks for the installed packages and installs if any missing
 (setq package-list
-      '(abyss-theme
+      '(
+        abyss-theme
         ace-window
         async
         aurora-theme
@@ -24,7 +25,6 @@
         epc
         epl
         exec-path-from-shell
-        f
         fiplr
         firecode-theme
         flycheck
@@ -61,7 +61,6 @@
         powerline
         protobuf-mode
         python-environment
-        s
         seq
         sublime-themes
         tao-theme

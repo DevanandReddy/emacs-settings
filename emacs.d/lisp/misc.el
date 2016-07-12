@@ -24,11 +24,11 @@
  (ido-mode t)
 
 ;; This is for running in terminal(iterm2, gnome Terminal)
-(if (equal window-system nil)
-    (set-face-background 'default "color-256"))
 ;; Customizing powerline
 (set-face-attribute 'mode-line nil
                     :foreground "Black"
                     :background "DarkOrange"
                     :box nil)
 (powerline-default-theme)
+(setq helm-mode-fuzzy-match t)
+(setq helm-completion-in-region-fuzzy-match t)

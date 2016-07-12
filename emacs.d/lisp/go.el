@@ -41,7 +41,10 @@
       (setenv "GOPATH"
               (concat cwd ":"
                       cwd "/vendor")))
-    ))
+    (require 'go-guru)
+    (setq go-guru-scope "...")
+    )
+  )
 
 (set-go-path-for-gb)
 (with-eval-after-load 'go-mode

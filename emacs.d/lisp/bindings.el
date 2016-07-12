@@ -68,6 +68,8 @@
 
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 ;; Easier buffer killing
 (global-unset-key (kbd "M-k"))
@@ -77,9 +79,6 @@
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
 (global-set-key (kbd "M-F") 'forward-to-word)
 (global-set-key (kbd "M-B") 'backward-to-word)
-
-;; Personal textmate.el bindings
-(global-set-key (kbd "C-c f") 'fiplr-find-file)
 
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
@@ -94,9 +93,8 @@
 (global-set-key (kbd "M-?") 'mark-paragraph)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'helm-recentf)
 (global-set-key "%" 'match-paren)
 (global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
-
 ;;; bindings.el ends here
