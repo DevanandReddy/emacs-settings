@@ -7,18 +7,20 @@
 
 ;;order is important
 (load "fonts")
-(load "global")
-(load "bindings")
 
 ;;go mode has a dependency on auto-complete
 (load "go")
+(load "go-tags")
 (load "web")
 ;;(load "oracle")
 
 (load "jedi-mode")
 (load "desktop-mode")
 ;; (load "eclim-mode")
-(load "coffee-defaults")
+;;(load "coffee-defaults")
 
 ;;; init.el ends here
+(load "global")
+(load "bindings")
+
 (load "misc")

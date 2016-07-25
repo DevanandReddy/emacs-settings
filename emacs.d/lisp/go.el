@@ -26,7 +26,10 @@
 (add-hook 'go-mode-hook (lambda ()
               (local-set-key (kbd "C-c i") 'go-goto-imports)))
 (add-hook 'go-mode-hook (lambda ()
-              (local-set-key (kbd "C-c d") 'godoc-at-point)))
+                          (local-set-key (kbd "C-c d") 'godoc-at-point)))
+(add-hook 'go-mode-hook (lambda ()
+              (local-set-key (kbd "C-c C-i") 'gotags-helm)))
+
 (add-hook 'go-mode-hook (lambda ()
               (go-eldoc-setup)))
 
@@ -42,7 +45,7 @@
               (concat cwd ":"
                       cwd "/vendor")))
     (require 'go-guru)
-    (setq go-guru-scope "...")
+    (setq go-guru-scope "git.gdsx.com/tla/go-conquest/command/conquestd")
     )
   )
 

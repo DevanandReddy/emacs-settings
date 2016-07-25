@@ -67,13 +67,15 @@
 (global-set-key (kbd "C-'") 'match-paren)
 
 ;; ibuffer > list-buffers
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
+(global-set-key (kbd "C-c C-i") 'helm-semantic-or-imenu)
 
 ;; Easier buffer killing
 (global-unset-key (kbd "M-k"))
 (global-set-key (kbd "M-K") 'kill-this-buffer)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Improved navigation and editing (assumes misc.el)
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
