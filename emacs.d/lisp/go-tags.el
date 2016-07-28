@@ -10,11 +10,65 @@
 (require 'helm)
 (require 'json)
 (require 'go-mode)
+(require 'dash)
 
 (defcustom gotags-command "gotags"
   "The 'gotags' command"
   :group 'gotags
   :type 'string)
+
+(defun get-value (alist &rest keys)
+  "Recursively find KEYs in ALIST."
+  (let ((found t)(key))
+    (while (and found keys)
+      (setq key (pop keys))
+      (cond ((equal (assoc key alist) nil) (setq found nil))
+            (t (setq alist (rest (assoc key alist)) found t)
+               )
+            ))
+    (if found
+        alist
+      nil)))
+
+(defun paramize (record)
+  (cond ((or (equal "m" (get-value record 'Type)) (equal "o" (get-value record 'Type)))
+         (concat
+          (if (equal (get-value record 'Fields 'ntype) nil)
+              (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "orange")))" "
+              (format "%s" (propertize (get-value record 'Fields 'ntype) 'face '(:foreground "orange"))))" "
+              (format "%s" (propertize (get-value record 'Name)))
+              (format "%s" (propertize (get-value record 'Fields 'signature) 'face '(:foreground "green")))" "
+           (if (not (equal (get-value record 'Fields 'type) ""))
+               (concat "(" (format "%s" (propertize (get-value record 'Fields 'type) 'face '(:foreground "cyan"))) ")")
+               )
+           ))
+        ((equal "f" (get-value record 'Type))
+         (concat
+          (format "%s" (propertize (get-value record 'Name) 'face '(:foreground "white")))
+          (format "%s" (propertize (get-value record 'Fields 'signature) 'face '(:foreground "green")))" "
+           (if (not (equal (get-value record 'Fields 'type) ""))
+               (concat "(" (format "%s" (propertize (get-value record 'Fields 'type) 'face '(:foreground "cyan"))) ")")
+               )
+           ))
+        ((equal "w" (get-value record 'Type))
+         (concat
+          (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "orange")))" "
+          (get-value record 'Name) " "
+          (format "%s" (propertize (get-value record 'Fields 'type) 'face '(:foreground "cyan")))" "
+          ))
+        ((or (equal "t" (get-value record 'Type)) (equal "v" (get-value record 'Type)))
+         (concat
+          (get-value record 'Name) " "
+          (if (not(equal (get-value record 'Fields 'type) nil))
+              (format "%s" (propertize (get-value record 'Fields 'type) 'face '(:foreground "cyan"))))
+          )
+         )
+        ((or (equal "i" (get-value record 'Type)) (equal "c" (get-value record 'Type)) (equal "n" (get-value record 'Type)))
+          (get-value record 'Name)
+         )
+
+        (t (get-value record 'Name))
+        ))
 
 (defun gotags--call (file-name)
   "Call gotags, parsing the current buffer(file), build a
@@ -31,7 +85,7 @@ helm structure"
                   outbuf
                   nil
                   "--format"
-                  "json-compact"
+                  "json"
                   file-name)
     (with-current-buffer outbuf
       (let ((json-object-type 'alist) (json-array-type 'list))
@@ -45,9 +99,8 @@ helm structure"
 (defun create-list (gotags-data section)
 (let ((clist))
   (setq clist (list))
-  (dolist (elem (cdr(assoc section gotags-data)))
-    (push (cons (cdr (assoc 'Field elem)) (cdr (assoc 'Line elem))) clist)
-    )
+  (dolist (elem (get-value gotags-data section))
+    (push (cons (paramize elem) (get-value elem 'Address)) clist))
   (reverse clist))
 )
 
@@ -66,7 +119,9 @@ helm structure"
   (let ((gotags-data) (helm-list) (go-file-name))
     (setq go-file-name (buffer-file-name))
     (setq gotags-data (gotags--call go-file-name))
+    (kill-buffer "*gotags*")
     ;; After many usage trials, I felt Methods,Functions are more frequently looked for than variables, constants, imports
+    (font-lock-mode-set-explicitly)
     (helm  :sources (list
                     (create-helm-source  gotags-data 'Methods "Methods")
                     (create-helm-source  gotags-data 'Functions "Functions")
@@ -76,7 +131,8 @@ helm structure"
                     (create-helm-source  gotags-data 'Variables "Variables")
                     (create-helm-source  gotags-data 'Constants "Constants")
                     (create-helm-source  gotags-data 'Imports "Imports")
-                    ))))
+                    ))
+    ))
 
 (provide 'go-tags)
 

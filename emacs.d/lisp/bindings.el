@@ -72,6 +72,7 @@
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-c C-i") 'helm-semantic-or-imenu)
 
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 ;; Easier buffer killing
 (global-unset-key (kbd "M-k"))
 (global-set-key (kbd "M-K") 'kill-this-buffer)
