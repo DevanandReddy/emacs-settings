@@ -12,7 +12,6 @@
 (load "go")
 (load "go-tags")
 (load "web")
-;;(load "oracle")
 
 (load "jedi-mode")
 (load "desktop-mode")

@@ -72,9 +72,7 @@
 ;;(require 'misc)
 
 (tool-bar-mode -1)
-
 (exec-path-from-shell-initialize)
-
 
 (defadvice compile (around split-horizontally activate)
   (let ((split-width-threshold nil)
@@ -85,9 +83,7 @@
  ido-ignore-buffers ;; ignore these guys
  '("\\` "  "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
    "^\*compilation" "^\*GTAGS" "^session\.*");; "^\*")
-
  ido-case-fold  t                 ; be case-insensitive
-
  ido-enable-last-directory-history t ; remember last used dirs
  ido-max-work-directory-list 30   ; should be enough
  )
@@ -129,4 +125,6 @@
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
       helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
-      helm-ff-file-name-history-use-recentf t)
+      helm-ff-file-name-history-use-recentf t
+      helm-mode-fuzzy-match t
+      helm-completion-in-region-fuzzy-match t)

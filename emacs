@@ -39,6 +39,7 @@
  '(linum-format " %7i ")
  '(neo-smart-open nil)
  '(neo-theme (quote nerd))
+ '(powerline-gui-use-vcs-glyph t)
  '(recentf-menu-before "Open File...")
  '(scroll-error-top-bottom nil)
  '(set-mark-command-repeat-pop nil)
@@ -75,4 +76,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(powerline-active1 ((t (:inherit mode-line :background "DarkOrange"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "grey11")))))

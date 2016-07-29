@@ -101,3 +101,4 @@
 (global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
 ;;; bindings.el ends here
+(global-set-key (kbd "C-=") 'er/expand-region)

@@ -11,9 +11,27 @@
 (require 'json)
 (require 'go-mode)
 (require 'dash)
+(require 's)
 
 (defcustom gotags-command "gotags"
   "The 'gotags' command"
+  :group 'gotags
+  :type 'string)
+(defcustom gotags-ctypes-color 'DarkOrange
+  "The 'gotags' command"
+  :group 'gotags
+  :type 'string)
+(defcustom gotags-signature-color 'green
+  "The 'gotags' command"
+  :group 'gotags
+  :type 'string)
+(defcustom gotags-type-color 'cyan
+  "The 'gotags' command"
+  :group 'gotags
+  :type 'string)
+
+(defcustom gotags-test-command "go test -run"
+  "The gotags test command"
   :group 'gotags
   :type 'string)
 
@@ -34,8 +52,8 @@
   (cond ((or (equal "m" (get-value record 'Type)) (equal "o" (get-value record 'Type)))
          (concat
           (if (equal (get-value record 'Fields 'ntype) nil)
-              (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "orange")))" "
-              (format "%s" (propertize (get-value record 'Fields 'ntype) 'face '(:foreground "orange"))))" "
+              (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "DarkOrange")))" "
+              (format "%s" (propertize (get-value record 'Fields 'ntype) 'face '(:foreground "DarkOrange"))))" "
               (format "%s" (propertize (get-value record 'Name)))
               (format "%s" (propertize (get-value record 'Fields 'signature) 'face '(:foreground "green")))" "
            (if (not (equal (get-value record 'Fields 'type) ""))
@@ -52,7 +70,7 @@
            ))
         ((equal "w" (get-value record 'Type))
          (concat
-          (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "orange")))" "
+          (format "%s" (propertize (get-value record 'Fields 'ctype) 'face '(:foreground "DarkOrange")))" "
           (get-value record 'Name) " "
           (format "%s" (propertize (get-value record 'Fields 'type) 'face '(:foreground "cyan")))" "
           ))
@@ -97,20 +115,34 @@ helm structure"
   (forward-line (1- line)))
 
 (defun create-list (gotags-data section)
-(let ((clist))
+(let ((clist)(alist) (a1) (a2))
   (setq clist (list))
   (dolist (elem (get-value gotags-data section))
-    (push (cons (paramize elem) (get-value elem 'Address)) clist))
-  (reverse clist))
-)
+    (push (cons (paramize elem) elem) clist))
+  (reverse clist)))
 
+(defun build-action (rec)
+  (let (actions (list))
+    (push '("Go". (lambda (rec)
+                    (gotags--goto-line (get-value rec 'Address)))) list)
+    )
+  )
 (defun create-helm-source (gotags-data section-name src-title)
   (let ((gotags-helm-source) (section-data))
     (setq section-data (create-list gotags-data section-name))
     (setq gotags-helm-source (helm-build-sync-source src-title
                                :candidates section-data
-                               :action (lambda (line-no)
-                                                (gotags--goto-line line-no))
+                               :action '(("Go". (lambda (rec)
+                                                  (gotags--goto-line (get-value rec 'Address))))
+                                         ("Test" . (lambda (rec)
+                                                     (if (s-suffix? "_test.go" (buffer-file-name))
+                                                         (if (equal (get-value rec 'Fields 'signature) "(t *testing.T)")
+                                                             (compile (format "%s %s" gotags-test-command  (get-value rec 'Name)))
+                                                       (message "%s" (propertize "Not a test" 'face '(:foreground "orange")))
+                                                           )
+                                                       (message "%s" (propertize "Not a test file" 'face '(:foreground "orange")))
+                                                       )))
+                                         )
                                :fuzzy-match t
                                ))))
 

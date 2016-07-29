@@ -22,6 +22,7 @@
         direx
         dracula-theme
         emacs-eclim
+        expand-region
         epc
         epl
         exec-path-from-shell
