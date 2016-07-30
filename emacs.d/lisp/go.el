@@ -28,7 +28,9 @@
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c d") 'godoc-at-point)))
 (add-hook 'go-mode-hook (lambda ()
-              (local-set-key (kbd "C-c C-i") 'gotags-helm)))
+              (local-set-key (kbd "C-c C-i f") 'gotags-file)))
+(add-hook 'go-mode-hook (lambda ()
+              (local-set-key (kbd "C-c C-i p") 'gotags-package)))
 
 (add-hook 'go-mode-hook (lambda ()
               (go-eldoc-setup)))

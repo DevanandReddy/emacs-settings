@@ -6,6 +6,7 @@
       '(
         abyss-theme
         ace-window
+        ace-jump-mode
         async
         aurora-theme
         auto-complete

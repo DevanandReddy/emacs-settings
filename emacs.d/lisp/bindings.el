@@ -102,3 +102,4 @@
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
 ;;; bindings.el ends here
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-0") 'ace-jump-mode)
