@@ -48,6 +48,7 @@
         grizzl
         helm
         helm-core
+        helm-ag
         htmlize
         jedi
         json-mode
@@ -63,6 +64,7 @@
         powerline
         protobuf-mode
         python-environment
+        smartparens
         seq
         sublime-themes
         tao-theme
@@ -96,3 +98,5 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 ;; Do not run this every time you start. Run this for a new setup
 ;;(ensure-package-installed  package-list)
+
+(provide 'ensure-packages)

@@ -1,18 +1,13 @@
 ;; http://xahlee.org/emacs/keyboard_shortcuts.html
 ;; Window manipulation
 ;;; Code:
-(global-set-key [(control kp-6)] 'enlarge-window-horizontally)
-(global-set-key [(control kp-4)] 'shrink-window-horizontally)
-(global-set-key [(control kp-8)] 'enlarge-window)
-(global-set-key [(control kp-2)] 'shrink-window)
-
 ;; Find stuff
-(global-set-key [(f2)]              'ag)
+(global-set-key [(f2)]              'helm-ag)
 (global-set-key [(control f2)]      'ag-project-files)
 
 (global-set-key (kbd "C-c r")       'query-replace)
 (global-set-key (kbd "M-s")     'rgrep)
-;; (global-set-key (kbd "C-c C-b")       'ecb-activate)
+
 
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
@@ -97,9 +92,11 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
-(global-set-key "%" 'match-paren)
 (global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
-;;; bindings.el ends here
+
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-0") 'ace-jump-mode)
+;;; bindings.el ends here
+
+(provide 'bindings)
