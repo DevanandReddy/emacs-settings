@@ -1,7 +1,24 @@
-;;load paths
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "~/.emacs.d/lisp/ensure-packages")
+;;order is important
+(load "~/.emacs.d/lisp/fonts")
+(load "~/.emacs.d/lisp/global")
+(load "~/.emacs.d/lisp/bindings")
 
-(load "init")
+;;go mode has a dependency on auto-complete
+(load "~/.emacs.d/lisp/go")
+(load "~/.emacs.d/lisp/web")
+;;(load "oracle")
+
+(load "~/.emacs.d/lisp/jedi-mode")
+(load "~/.emacs.d/lisp/desktop-mode")
+;; (load "eclim-mode")
+(load "~/.emacs.d/lisp/coffee-defaults")
+
+;;; init.el ends here
+(load "~/.emacs.d/lisp/misc")
+(load "~/.emacs.d/lisp/elixir-setup")
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

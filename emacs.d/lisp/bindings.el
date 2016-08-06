@@ -98,5 +98,5 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-0") 'ace-jump-mode)
 ;;; bindings.el ends here
-
+(global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (provide 'bindings)

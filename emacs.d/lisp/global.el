@@ -98,7 +98,7 @@
 
 (setq org-src-fontify-natively t)
 
-(setq tab-width 4)
+(setq tab-width 2)
 (setq-default indent-tabs-mode nil)
 
 (defun rename-file-and-buffer ()
@@ -113,7 +113,6 @@
          (t
           (rename-file filename new-name t)
           (set-visited-file-name new-name t t)))))))
-(global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules" "vendor" "pkg" "bin"))
                             (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
