@@ -16,7 +16,7 @@
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
 (global-set-key [(control f5)] 'revbufs)
-
+(global-set-key [(f6)] 'helm-register)
 ;; Indenting and alignment
 ;; (global-set-key [(f8)]         'indent-region)
 ;; (global-set-key [(control f8)] 'align)
@@ -92,6 +92,7 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
+
 (global-set-key (kbd "C-c C-d s") 'my-desktop-save) ; was digit-argument
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
 

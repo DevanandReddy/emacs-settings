@@ -17,7 +17,8 @@
 ;;; init.el ends here
 (load "~/.emacs.d/lisp/misc")
 (load "~/.emacs.d/lisp/elixir-setup")
-
+(load "~/.emacs.d/lisp/registers")
+(load "~/.emacs.d/lisp/go-tags")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

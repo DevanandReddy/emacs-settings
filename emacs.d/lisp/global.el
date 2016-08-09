@@ -127,3 +127,4 @@
       helm-ff-file-name-history-use-recentf t
       helm-mode-fuzzy-match t
       helm-completion-in-region-fuzzy-match t)
+(yas-global-mode 1)
