@@ -21,14 +21,26 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (setq ibuffer-expert t)
- (ido-mode t)
+(ido-mode t)
 
 ;; This is for running in terminal(iterm2, gnome Terminal)
-;; Customizing powerline
-(set-face-attribute 'mode-line nil
-                    :foreground "Black"
-                    :background "DarkOrange"
-                    :box nil)
-(powerline-default-theme)
+
 (setq helm-mode-fuzzy-match t)
 (setq helm-completion-in-region-fuzzy-match t)
+
+;; ask the user if they wish to clock out before killing Emacs
+(defun my/org-query-clock-out ()
+"Ask the user before clocking out.
+This is a useful function for adding to `kill-emacs-query-functions'."
+(if (and (featurep 'org-clock)
+(funcall 'org-clocking-p)
+(y-or-n-p "You are currently clocking time, clock out? "))
+(org-clock-out)
+t)) ; only fails on keyboard quit or error
+
+(add-hook 'kill-emacs-query-functions 'my/org-query-clock-out)
+
+(require 'powerline)
+(powerline-default-theme)
+(provide 'misc)
+;;; misc.el ends here

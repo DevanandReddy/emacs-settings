@@ -7,7 +7,7 @@
 (add-to-list 'ac-modes 'web-mode)
 (add-to-list 'ac-modes 'org-mode)
 (add-to-list 'ac-modes 'coffee-mode)
-(setq web-mode-markup-indent-offset 2)
+;; (setq web-mode-markup-indent-offset 2)
 
 ;;shortcuts
 (define-key web-mode-map (kbd "C-m") 'web-mode-fold-or-unfold)
@@ -27,15 +27,15 @@
 (eval-after-load 'css-mode
   '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
 
-(eval-after-load 'js2-mode
-  '(add-hook 'js2-mode-hook
-             (lambda ()
-               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;; (eval-after-load 'js2-mode
+;;   '(add-hook 'js2-mode-hook
+;;              (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
-(eval-after-load 'json-mode
-  '(add-hook 'json-mode-hook
-             (lambda ()
-               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;; (eval-after-load 'json-mode
+;;   '(add-hook 'json-mode-hook
+;;              (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 (eval-after-load 'sgml-mode
   '(add-hook 'html-mode-hook

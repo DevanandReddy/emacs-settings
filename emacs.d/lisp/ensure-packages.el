@@ -1,6 +1,8 @@
 (require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://melpa.org/packages/") t)
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 ;;; Code;This file checks for the installed packages and installs if any missing
 (setq package-list
       '(
@@ -8,12 +10,9 @@
         ace-window
         ace-jump-mode
         async
-        aurora-theme
         auto-complete
         avy
         coffee-mode
-        color-theme
-        color-theme-solarized
         company
         concurrent
         ctable
@@ -28,10 +27,7 @@
         epl
         exec-path-from-shell
         fiplr
-        firecode-theme
         flycheck
-        flycheck-protobuf
-        flymake-easy
         flymake-go
         flymake-json
         flymake-python-pyflakes
@@ -66,7 +62,7 @@
         python-environment
         smartparens
         seq
-        sublime-themes
+        swiper-helm
         tao-theme
         ujelly-theme
         virtualenvwrapper

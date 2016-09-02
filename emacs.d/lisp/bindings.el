@@ -3,7 +3,7 @@
 ;;; Code:
 ;; Find stuff
 (global-set-key [(f2)]              'helm-ag)
-(global-set-key [(control f2)]      'ag-project-files)
+(global-set-key [(control f2)]      'helm-ag-project-root)
 
 (global-set-key (kbd "C-c r")       'query-replace)
 (global-set-key (kbd "M-s")     'rgrep)

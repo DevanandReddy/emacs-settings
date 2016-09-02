@@ -99,7 +99,6 @@
 (setq org-src-fontify-natively t)
 
 (setq tab-width 2)
-(setq-default indent-tabs-mode nil)
 
 (defun rename-file-and-buffer ()
   "Rename the current buffer and file it is visiting."
@@ -128,3 +127,5 @@
       helm-mode-fuzzy-match t
       helm-completion-in-region-fuzzy-match t)
 (yas-global-mode 1)
+(setq org-todo-keywords
+'((sequence "TODO(t)" "INPROGRESS(p)" "VERIFY(v)" "FEEDBACK(f)" "|" "DONE(d)" "DELEGATED(g)")))
