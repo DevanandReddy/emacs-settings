@@ -6,7 +6,8 @@
 ;;; Code;This file checks for the installed packages and installs if any missing
 (setq package-list
       '(
-        abyss-theme
+        projectile
+        helm-projectile
         ace-window
         ace-jump-mode
         async
@@ -62,9 +63,6 @@
         python-environment
         smartparens
         seq
-        swiper-helm
-        tao-theme
-        ujelly-theme
         virtualenvwrapper
         web-beautify
         web-mode
