@@ -36,6 +36,9 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(ansi-term-color-vector
+   [unspecified "#081724" "#ff694d" "#68f6cb" "#fffe4e" "#bad6e2" "#afc0fd" "#d2f1ff" "#d3f9ee"] t)
+ '(blink-cursor-mode nil)
  '(coffee-args-compile (quote ("-c" "--bare")))
  '(coffee-tab-width 4)
  '(column-number-mode t)
@@ -64,7 +67,7 @@
  '(neo-theme (quote nerd))
  '(package-selected-packages
    (quote
-    (gorepl-mode powerline tronesque-theme bash-completion flycheck-elixir tree-mode smart-mode-line-powerline-theme smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline smartparens rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx go-autocomplete flymake-python-pyflakes flymake-json flymake-go flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
+    (helm-projectile projectile direnv tronesque-theme tree-mode smart-mode-line-powerline-theme smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline smartparens rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx go-autocomplete flymake-python-pyflakes flymake-json flymake-go flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (left . right)))
  '(powerline-gui-use-vcs-glyph nil)
