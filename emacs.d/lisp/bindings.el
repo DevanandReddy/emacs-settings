@@ -23,6 +23,8 @@
 ;; (global-set-key [(shift f8)]   'align-current)
 ;; (global-set-key [(meta f8)]    'align-regexp)
 (global-set-key [(f8)] 'neotree-toggle)
+(global-set-key [(control f8)] 'neotree-find)
+
 
 ;; Version control and change related
 (global-set-key [(control f9)] 'magit-push)
@@ -97,7 +99,7 @@
 (global-set-key (kbd "C-c C-d r") 'my-desktop-read) ; was digit-argument
 
 (global-set-key (kbd "C-=") 'er/expand-region)
-(global-set-key (kbd "C-0") 'ace-jump-mode)
+(global-set-key (kbd "C-;") 'ace-jump-mode)
 ;;; bindings.el ends here
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (provide 'bindings)

@@ -105,6 +105,7 @@ helm structure"
                   nil
                   "-format"
                   "json"
+                  "-silent"
                   "-R"
                   path)
     (with-current-buffer outbuf
