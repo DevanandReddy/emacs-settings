@@ -28,9 +28,9 @@
 (add-hook 'go-mode-hook (lambda ()
           (local-set-key (kbd "C-c d") 'godoc-at-point)))
 (add-hook 'go-mode-hook (lambda ()
-      (local-set-key (kbd "C-c C-i C-f") 'gotags-file)))
+      (local-set-key (kbd "C-c C-i C-f") 'gobimenu-file)))
 (add-hook 'go-mode-hook (lambda ()
-      (local-set-key (kbd "C-c C-i C-p") 'gotags-package)))
+      (local-set-key (kbd "C-c C-i C-p") 'gobimenu-package)))
 
 (add-hook 'go-mode-hook (lambda ()
       (go-eldoc-setup)))
