@@ -1,7 +1,7 @@
 (when (eq system-type 'darwin)
   ;; default Latin font (e.g. Consolas)
   ;; default font size (point * 10)
-  (set-face-attribute 'default nil :family "Courier Prime Code" :height 140 :weight 'normal))
+  (set-face-attribute 'default nil :family "Source Code Pro" :height 130 :weight 'normal))
 
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)

@@ -35,13 +35,18 @@
   :group 'gobimenu
   :type 'string)
 
+;; (defun get-value (alist &rest keys)
+;;   "Recursively find KEYs in ALIST."
+;;   (while keys
+;;     (setq alist (cdr (assoc (pop keys) alist))))
+;;   alist)
 (defun get-value (alist &rest keys)
   "Recursively find KEYs in ALIST."
   (let ((found t)(key))
     (while (and found keys)
       (setq key (pop keys))
       (cond ((equal (assoc key alist) nil) (setq found nil))
-            (t (setq alist (rest (assoc key alist)) found t)
+            (t (setq alist (cdr (assoc key alist)) found t)
                )
             ))
     (if found
@@ -117,12 +122,6 @@ helm structure"
     (push (cons (paramize elem) elem) clist))
   (reverse clist)))
 
-(defun build-action (rec)
-  (let (actions (list))
-    (push '("Go". (lambda (rec)
-                    (gobimenu--goto-line (get-value rec 'Address)))) list)
-    )
-  )
 (defun create-helm-source (gobimenu-data section-name )
   (let ((gobimenu-helm-source) (section-data))
     (setq section-data (create-list gobimenu-data section-name))

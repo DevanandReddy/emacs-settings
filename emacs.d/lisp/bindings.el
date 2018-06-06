@@ -102,4 +102,6 @@
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 ;;; bindings.el ends here
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
+
+
 (provide 'bindings)

@@ -4,7 +4,7 @@
 
 ;; (add-to-list 'ac-dictionary-directories "elpa/auto-complete-20150322.813/dict")
 (ac-config-default)
-(require 'go-autocomplete)
+;;(require 'go-autocomplete)
 ;;(require 'go-mode-load)
 
 
@@ -26,11 +26,11 @@
 (add-hook 'go-mode-hook (lambda ()
       (local-set-key (kbd "C-c i") 'go-goto-imports)))
 (add-hook 'go-mode-hook (lambda ()
-          (local-set-key (kbd "C-c d") 'godoc-at-point)))
+      (local-set-key (kbd "C-c d") 'godoc-at-point)))
 (add-hook 'go-mode-hook (lambda ()
-      (local-set-key (kbd "C-c C-i C-f") 'gotags-file)))
+      (local-set-key (kbd "C-c C-i C-f") 'gobimenu-file)))
 (add-hook 'go-mode-hook (lambda ()
-      (local-set-key (kbd "C-c C-i C-p") 'gotags-package)))
+      (local-set-key (kbd "C-c C-i C-p") 'gobimenu-package)))
 
 (add-hook 'go-mode-hook (lambda ()
       (go-eldoc-setup)))
@@ -46,14 +46,14 @@
     (coding-system-for-write 'utf-8))
     (with-current-buffer outbuf
       (erase-buffer))
-    (call-process "gb"
+    (if (executable-find "gb")
+    ((call-process "gb"
       nil
       outbuf
       nil
       "list")
     (with-current-buffer outbuf
-      (replace-regexp-in-string "\n" "," (buffer-string)))
-    ))
+      (replace-regexp-in-string "\n" "," (buffer-string)))))))
 
 ;; This is for gb based projects.
 (defun set-go-path-for-gb ()
@@ -62,15 +62,16 @@
 
       (setenv "GOPATH"
       (concat cwd ":"
-          cwd "/vendor")))
+      cwd "/vendor")))
     (require 'go-guru)
     (setq go-guru-scope (gb-list--call))
     (kill-buffer "*gb-list*")
  ))
 
 (set-go-path-for-gb)
-(with-eval-after-load 'go-mode
-  (require 'go-autocomplete))
+
+;; (with-eval-after-load 'go-mode
+;;   (require 'go-autocomplete))
 
 
 ;;;; go.el ends here

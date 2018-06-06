@@ -58,7 +58,7 @@
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
       (lambda ()
-        (if whitespace-cleanup-on-save (whitespace-cleanup))))
+    (if whitespace-cleanup-on-save (whitespace-cleanup))))
 
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
@@ -76,7 +76,7 @@
 
 (defadvice compile (around split-horizontally activate)
   (let ((split-width-threshold nil)
-        (split-height-threshold 0))
+    (split-height-threshold 0))
     ad-do-it))
 ;; "^\*Mess"
 (setq
@@ -113,7 +113,7 @@
       (rename-file filename new-name t)
       (set-visited-file-name new-name t t)))))))
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules" "vendor" "pkg" "bin"))
-                (files ("*.jpg" "*.png" "*.zip" "*~"))))
+        (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
@@ -130,9 +130,5 @@
 (setq org-todo-keywords
 '((sequence "TODO(t)" "INPROGRESS(p)" "VERIFY(v)" "FEEDBACK(f)" "|" "DONE(d)" "DELEGATED(g)")))
 
-    (add-hook 'after-make-frame-functions
-    (lambda (frame)
-        (select-frame frame)
-        (load-theme 'tronesque t)))
-    (load-theme 'tronesque t)
 (setq echo-keystrokes 0.1)
+(smartparens-global-mode)
