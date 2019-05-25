@@ -92,5 +92,7 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 ;; Do not run this every time you start. Run this for a new setup
 ;;(ensure-package-installed  package-list)
+(unless (package-installed-p 'alchemist)
+  (package-install 'alchemist))
 
 (provide 'ensure-packages)

@@ -13,15 +13,16 @@
 (setq transient-mark-mode t)
 (pending-delete-mode t)
 
-(global-linum-mode 1)
-(setq linum-format "%3d ")
-;; Display line and column numbers
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
+
+;;Display line and column numbers
 (setq line-number-mode    t)
 (setq column-number-mode  t)
 
 ;; Modeline info
-(display-time-mode 1)
-;; (display-battery-mode 1)
+(display-time-mode 0)
+(display-battery-mode 0)
 
 ;; Small fringes
 ;;(set-fringe-mode '(1 . 1))
@@ -132,3 +133,4 @@
 
 (setq echo-keystrokes 0.1)
 (smartparens-global-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)

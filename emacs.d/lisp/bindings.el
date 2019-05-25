@@ -36,9 +36,9 @@
 (global-set-key (kbd "M-2") 'split-window-vertically) ; was digit-argument
 (global-set-key (kbd "M-1") 'delete-other-windows) ; was digit-argument
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
-(global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
-(global-set-key (kbd "M-p") 'ace-window)
-;; (global-set-key (kbd "M-O") 'rotate-windows)
+;;(global-setq-key (kbd "M-o") 'other-window) ; was facemenu-keymap
+(global-set-key (kbd "M-o") 'ace-window)
+;;(global-set-key (kbd "M-O") 'rotate-windows)
 
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
@@ -102,6 +102,6 @@
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 ;;; bindings.el ends here
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
-
+(global-set-key (kbd "C-c p h") 'helm-projectile)
 
 (provide 'bindings)
