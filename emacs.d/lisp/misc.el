@@ -9,9 +9,9 @@
 
 (setq ibuffer-formats
       '((mark modified read-only " "
-          (name 30 30 :left :elide) " "
-          (size 9 -1 :right) " "
-          (mode 16 16 :left :elide) " " filename-and-process)
+	  (name 30 30 :left :elide) " "
+	  (size 9 -1 :right) " "
+	  (mode 16 16 :left :elide) " " filename-and-process)
     (mark " " (name 16 -1) " " filename)))
 
 (require 'recentf)
@@ -40,7 +40,5 @@ t)) ; only fails on keyboard quit or error
 
 (add-hook 'kill-emacs-query-functions 'my/org-query-clock-out)
 
-(require 'powerline)
-(powerline-default-theme)
 (provide 'misc)
 ;;; misc.el ends here

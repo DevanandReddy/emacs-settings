@@ -134,3 +134,6 @@
 (setq echo-keystrokes 0.1)
 (smartparens-global-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+(require 'doom-modeline)
+(doom-modeline-mode 1)
