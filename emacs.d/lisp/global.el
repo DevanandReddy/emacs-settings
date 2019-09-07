@@ -114,7 +114,7 @@
       (rename-file filename new-name t)
       (set-visited-file-name new-name t t)))))))
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "node_modules" "vendor" "pkg" "bin"))
-        (files ("*.jpg" "*.png" "*.zip" "*~"))))
+    (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
@@ -137,3 +137,7 @@
 
 (require 'doom-modeline)
 (doom-modeline-mode 1)
+
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(delete-selection-mode 1)

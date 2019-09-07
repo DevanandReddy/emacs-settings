@@ -1,8 +1,7 @@
-(when (eq system-type 'darwin)
   ;; default Latin font (e.g. Consolas)
   ;; default font size (point * 10)
-  (set-face-attribute 'default nil :family "SF Mono" :height 140 :weight 'normal))
-
+ (set-face-attribute 'default nil :family "Iosevka Term" :height 120 :weight 'normal)
+;;iosevka Term
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)
 ;; (set-face-attribute 'default nil :height 240)

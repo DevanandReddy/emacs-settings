@@ -2,13 +2,13 @@
 ;; Window manipulation
 ;;; Code:
 ;; Find stuff
-(global-set-key [(f2)]              'helm-ag)
-(global-set-key [(control f2)]      'helm-ag-project-root)
+(global-set-key (kbd "C-c k")              'counsel-ag)
+;;(global-set-key [(control f2)]      'helm-ag-project-root)
 
 (global-set-key (kbd "C-c r")       'query-replace)
 (global-set-key (kbd "M-s")     'rgrep)
-
-
+(global-set-key (kbd "C-s")     'swiper)
+(global-set-key (kbd "C-r")     'swiper)
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
 ;; (global-set-key [(f4)]    'kmacro-end-or-call-macro)  ;; already defined
@@ -16,7 +16,7 @@
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
 (global-set-key [(control f5)] 'revbufs)
-(global-set-key [(f6)] 'helm-register)
+(global-set-key [(f6)] 'counsel-register)
 ;; Indenting and alignment
 ;; (global-set-key [(f8)]         'indent-region)
 ;; (global-set-key [(control f8)] 'align)
@@ -64,10 +64,10 @@
 (global-set-key (kbd "C-'") 'match-paren)
 
 ;; ibuffer > list-buffers
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
-(global-set-key (kbd "C-c C-i") 'helm-semantic-or-imenu)
+(global-set-key (kbd "C-c C-i") 'helm-imenu)
 
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 ;; Easier buffer killing

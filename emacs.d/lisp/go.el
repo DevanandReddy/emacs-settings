@@ -1,6 +1,6 @@
 ;; Also you could setup any combination (for example M-TAB)
 ;;for invoking auto-complete:
-(require 'auto-complete-config)
+;;(require 'auto-complete-config)
 
 ;; (add-to-list 'ac-dictionary-directories "elpa/auto-complete-20150322.813/dict")
 (ac-config-default)
@@ -13,9 +13,10 @@
 
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 ;;(require 'go-direx)
-(setq gofmt-command "goimports")
 
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
+
 (add-hook 'go-mode-hook (lambda ()
       (local-set-key (kbd "C-c C-p") 'go-play-region)))
 
@@ -35,7 +36,7 @@
 (add-hook 'go-mode-hook (lambda ()
       (go-eldoc-setup)))
 
-(setq compile-command "gb build")
+(setq compile-command "go build ./...")
 (add-hook 'go-mode-hook (lambda ()
       (local-set-key (kbd "C-c C-c") 'compile)))
 
@@ -68,7 +69,7 @@
     (kill-buffer "*gb-list*")
  ))
 
-(set-go-path-for-gb)
+;;(set-go-path-for-gb)
 
 ;; (with-eval-after-load 'go-mode
 ;;   (require 'go-autocomplete))

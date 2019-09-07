@@ -1,4 +1,4 @@
-;; Added by Package.el.  This must come before configurations of
+ ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
@@ -11,18 +11,18 @@
 (load "~/.emacs.d/lisp/bindings")
 
 ;;go mode has a dependency on auto-complete
-;;(load "~/.emacs.d/lisp/go")
+(load "~/.emacs.d/lisp/lsp")
 (load "~/.emacs.d/lisp/web")
 ;;(load "oracle")
 
 ;; (load "~/.emacs.d/lisp/jedi-mode")
 (load "~/.emacs.d/lisp/desktop-mode")
 ;; (load "eclim-mode")
-(load "~/.emacs.d/lisp/coffee-defaults")
+;;(load "~/.emacs.d/lisp/coffee-defaults")
 
 ;;; init.el ends here
 (load "~/.emacs.d/lisp/misc")
-(load "~/.emacs.d/lisp/elixir-setup")
+;;(load "~/.emacs.d/lisp/elixir-setup")
 (load "~/.emacs.d/lisp/registers")
 (load "~/.emacs.d/lisp/go-bimenu")
 (load "~/.emacs.d/lisp/elisp-mode")
@@ -35,7 +35,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+   ["#3c3836" "#fb4933" "#b8bb26" "#fabd2f" "#83a598" "#d3869b" "#8ec07c" "#ebdbb2"])
  '(ansi-term-color-vector
    [unspecified "#081724" "#ff694d" "#68f6cb" "#fffe4e" "#bad6e2" "#afc0fd" "#d2f1ff" "#d3f9ee"] t)
  '(blink-cursor-mode nil)
@@ -103,8 +103,8 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (flycheck-pos-tip flycheck-clojure gruvbox-theme nimbus-theme solarized-theme atom-one-dark-theme rainbow-delimiters planet-theme zenburn-theme dakrone-theme atom-dark-theme ample-theme arc-dark-theme cljr-helm clj-refactor graphql-mode graphql which-key cider helm-projectile projectile direnv tree-mode smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx flymake-python-pyflakes flymake-json flymake-go flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+    (clj-refactor use-package treemacs centaur-tabs ## company-box company-lsp lsp-ui lsp-mode go-imenu groovy-mode wgrep guru-mode ivy-hydra counsel-projectile counsel flycheck-pos-tip flycheck-clojure gruvbox-theme nimbus-theme solarized-theme atom-one-dark-theme rainbow-delimiters planet-theme zenburn-theme dakrone-theme atom-dark-theme ample-theme arc-dark-theme cljr-helm graphql-mode graphql which-key cider helm-projectile projectile direnv tree-mode smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx flymake-json flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
+ '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#282828")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(recentf-menu-before "Open File...")
@@ -162,4 +162,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "SF Mono" :foundry "APPL" :slant normal :weight normal :height 113 :width normal)))))
