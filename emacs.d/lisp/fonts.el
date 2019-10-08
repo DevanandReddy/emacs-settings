@@ -1,6 +1,6 @@
   ;; default Latin font (e.g. Consolas)
   ;; default font size (point * 10)
- (set-face-attribute 'default nil :family "Iosevka Term" :height 120 :weight 'normal)
+(set-face-attribute 'default nil :family "Cascadia Code" :height 130 :weight 'light)
 ;;iosevka Term
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)

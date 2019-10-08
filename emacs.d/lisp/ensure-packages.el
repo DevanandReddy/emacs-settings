@@ -1,6 +1,7 @@
 (require 'package)
-(add-to-list 'package-archives
-     '("melpa-stable" . "http://melpa.org/packages/") t)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (package-initialize)
 
 ;;; Code;This file checks for the installed packages and installs if any missing
@@ -8,9 +9,6 @@
       '(
         doom-modeline
         gruvbox-theme
-        cider
-        flycheck-clojure
-        clj-refactor
         projectile
         helm-projectile
         ace-window
@@ -70,8 +68,10 @@
         window-numbering
         with-editor
         yaml-mode
-        alchemist
         yasnippet
+        use-package
+        cider
+        flycheck-clojure
         ))
 
 
@@ -81,6 +81,7 @@
 Return a list of installed packages or nil for every skipped package."
   (mapcar
    (lambda (package)
+;;     (message "%s" package)
      ;; (package-installed-p 'evil)
      (if (package-installed-p package)
      nil
@@ -90,6 +91,7 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; make sure to have downloaded archive description.
 ;; Or use package-archive-contents as suggested by Nicolas Dudebout
+
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
 ;; Do not run this every time you start. Run this for a new setup

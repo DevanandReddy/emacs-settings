@@ -103,7 +103,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (clj-refactor use-package treemacs centaur-tabs ## company-box company-lsp lsp-ui lsp-mode go-imenu groovy-mode wgrep guru-mode ivy-hydra counsel-projectile counsel flycheck-pos-tip flycheck-clojure gruvbox-theme nimbus-theme solarized-theme atom-one-dark-theme rainbow-delimiters planet-theme zenburn-theme dakrone-theme atom-dark-theme ample-theme arc-dark-theme cljr-helm graphql-mode graphql which-key cider helm-projectile projectile direnv tree-mode smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx flymake-json flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
+    (kotlin-mode swiper clj-refactor use-package treemacs centaur-tabs ## company-box company-lsp lsp-ui lsp-mode go-imenu groovy-mode wgrep guru-mode ivy-hydra counsel-projectile counsel flycheck-pos-tip flycheck-clojure gruvbox-theme nimbus-theme solarized-theme atom-one-dark-theme rainbow-delimiters planet-theme zenburn-theme dakrone-theme atom-dark-theme ample-theme arc-dark-theme cljr-helm graphql-mode graphql which-key cider helm-projectile projectile direnv tree-mode smart-mode-line yaml-mode window-numbering web-mode web-beautify vlf virtualenvwrapper ujelly-theme tao-theme swiper-helm sublime-themes spaceline rich-minority react-snippets phoenix-dark-pink-theme ox-gfm nlinum neotree markdown-mode magit mag-menu json-mode js2-mode jedi htmlize helm-itunes helm-ag govet golden-ratio go-snippets go-scratch go-rename go-guru go-errcheck go-eldoc go-direx flymake-json flycheck-protobuf flycheck firecode-theme fiplr f expand-region exec-path-from-shell emacs-eclim elpy elixir-yasnippets ecb dracula-theme diff-hl color-theme-solarized coffee-mode aurora-theme angular-snippets alchemist ag ack ace-window ace-jump-mode abyss-theme)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#282828")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
@@ -162,4 +162,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "SF Mono" :foundry "APPL" :slant normal :weight normal :height 113 :width normal)))))
+ )

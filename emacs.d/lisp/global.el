@@ -1,6 +1,7 @@
 ;; key bindings
 (setq mac-command-modifier (quote control))
 (setq mac-control-modifier (quote super))
+(setq mac-option-modifier (quote meta))
 (menu-bar-mode t)
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
@@ -141,3 +142,5 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 (delete-selection-mode 1)
+(if (fboundp 'mac-auto-operator-composition-mode)
+    (mac-auto-operator-composition-mode))
