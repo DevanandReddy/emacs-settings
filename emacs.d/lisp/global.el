@@ -2,6 +2,8 @@
 (setq mac-command-modifier (quote control))
 (setq mac-control-modifier (quote super))
 (setq mac-option-modifier (quote meta))
+;;(cua-mode t)
+
 (menu-bar-mode t)
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
@@ -144,3 +146,7 @@
 (delete-selection-mode 1)
 (if (fboundp 'mac-auto-operator-composition-mode)
     (mac-auto-operator-composition-mode))
+
+(custom-set-variables
+ '(help-at-pt-timer-delay 1)
+ '(help-at-pt-display-when-idle '(flymake-diagnostic)))

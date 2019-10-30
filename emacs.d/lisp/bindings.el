@@ -40,6 +40,8 @@
 (global-set-key (kbd "M-o") 'ace-window)
 ;;(global-set-key (kbd "M-O") 'rotate-windows)
 
+
+
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
 ;; Replace ibuffer's M-o
@@ -66,7 +68,7 @@
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'helm-mini)
-(global-set-key (kbd "C-x f") 'fiplr-find-file)
+;;(global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-c C-i") 'helm-imenu)
 
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
@@ -103,5 +105,35 @@
 ;;; bindings.el ends here
 (global-set-key (kbd "C-c C-r")  'rename-file-and-buffer)
 (global-set-key (kbd "C-c p h") 'helm-projectile)
+
+(setq tab-command (lookup-key (current-global-map) (kbd "TAB")))
+;;Dev's ergonomic keybindings
+(global-unset-key (kbd "C-t")) ; was transpose char
+(global-unset-key (kbd "M-t")) ; was transpose word
+
+;; (global-unset-key (kbd "C-n")) ; was move next line
+;; (global-unset-key (kbd "C-p")) ; was move previous line
+;; (global-unset-key (kbd "C-f")) ; was forward one char
+;; (global-unset-key (kbd "C-b")) ; was backward one char
+;; (global-unset-key (kbd "C-k")) ; was kill the line
+;; (global-unset-key (kbd "C-w")) ; was cut the line
+;; (global-unset-key (kbd "C-y")) ; was yank the line
+;; (global-unset-key (kbd "C-i")) ;
+;; (global-unset-key (kbd "M-i")) ;
+
+
+(global-set-key (kbd "C-t") 'helm-mini)
+(global-set-key (kbd "M-t") 'fiplr-find-file)
+
+;; (global-set-key (kbd "C-i") 'previous-line)
+;; (global-set-key (kbd "C-k") 'next-line)
+;; (global-set-key (kbd "M-j") 'backward-word)
+;; (global-set-key (kbd "M-l") 'forward-word)
+;; (global-set-key (kbd "C-j") 'backward-char)
+;; (global-set-key (kbd "C-l") 'forward-char)
+;; (global-set-key (kbd "M-i") 'scroll-down-command)
+;; (global-set-key (kbd "M-k") 'scroll-up-command)
+;; (global-set-key (kbd "C-S-d") 'kill-line)
+;; (global-set-key [tab] tab-command)
 
 (provide 'bindings)
